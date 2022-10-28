@@ -1,8 +1,7 @@
 import React from "react";
 import {
   AppBar,
-  Button,
-  Container,
+  Button, Container,
   IconButton,
   Menu,
   MenuItem,
@@ -10,8 +9,7 @@ import {
   Toolbar,
   Typography,
   useTheme,
-} from "@mui/material";
-import ShieldIcon from "@mui/icons-material/Shield";
+} from '@mui/material';
 import {
   setDefaultLanguage,
   setTranslations,
@@ -22,7 +20,6 @@ import en from "../assets/transaltion/en.json";
 import LanguageIcon from "@mui/icons-material/Language";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import ElectricCarIcon from "@mui/icons-material/ElectricCar";
-import DeleteIcon from "@mui/icons-material/Delete";
 
 setTranslations({ de, en });
 setDefaultLanguage("en");
@@ -42,14 +39,13 @@ const Navigation = () => {
 
   return (
     <>
-      <AppBar style={{padding: '12px 0'}} position={"fixed"} color="transparent">
-        <Toolbar
-          sx={{
-            width: "100%",
-            maxWidth: "70%",
-            mx: "auto",
-          }}
-        >
+      <AppBar
+        style={{ padding: "12px 0" }}
+        position={"relative"}
+        color="transparent"
+      >
+
+        <Toolbar>
           <IconButton size={"large"} edge="start" aria-label="menu">
             <ElectricCarIcon color={"primary"} />
           </IconButton>
