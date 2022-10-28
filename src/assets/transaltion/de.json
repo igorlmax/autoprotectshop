@@ -1,3 +1,11 @@
 {
-  "home": "Home"
+  "home": "Home",
+  "navigation": {
+    "getQuote": "Get Quote",
+    "Support": "Support",
+    "Help": "Help",
+    "Hotline": "Hotline",
+    "reportDamage": "Report damage",
+    "login": "Login"
+  }
 }

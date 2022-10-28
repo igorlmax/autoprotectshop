@@ -1,3 +1,13 @@
 {
-  "home": "Munjanjo"
+  "appName": "Insurance",
+  "navigation": {
+    "getQuote": "Get Quote",
+    "Help": "Help",
+    "Hotline": "Hotline",
+    "reportDamage": "Report damage",
+    "login": "Login",
+    "aboutUs": "About us",
+    "languages": "Languages",
+    "contact": "Contact us"
+  }
 }
