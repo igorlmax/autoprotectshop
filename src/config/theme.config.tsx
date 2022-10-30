@@ -2,10 +2,16 @@ import React from "react";
 import { createTheme } from "@mui/material";
 
 export const ThemeConfig = createTheme({
+  typography: {
+    allVariants: {
+      fontFamily: "Rubik",
+      textTransform: 'none'
+    },
+  },
   mixins: {
     toolbar: {
-      minHeight: 72
-    }
+      minHeight: 72,
+    },
   },
   components: {
     // Name of the component

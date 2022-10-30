@@ -1,13 +1,4 @@
 {
-  "home": "Home",
-  "navigation": {
-    "getQuote": "Get Quote",
-    "Support": "Support",
-    "Help": "Help",
-    "Hotline": "Hotline",
-    "reportDamage": "Report damage",
-    "login": "Login"
-  },
   "services": {
     "parkingDamage": "Parkschaden",
     "assistance": "Assistance",
@@ -15,5 +6,10 @@
     "purchasePriceProtection": "Kaufpreisschutz",
     "pointThree": "Eigenschäden",
     "innerSpace": "Innenraum"
+  },
+  "featured": {
+    "trustExperts": "Einfach Experten vertrauen",
+    "pricePerformance": "Versichere dein Auto beim Preis-Leistungs-Sieger",
+    "calculateCarInsurance": "Jetzt Autoversicherung berechnen"
   }
 }
