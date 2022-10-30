@@ -15,7 +15,7 @@ const Featured = () => {
   const theme = useTheme();
 
   return (
-    <Grid container style={{ backgroundColor: "#f7f7f9" }}>
+    <Grid container style={{ backgroundColor: "#f7f7f9" }} py={3}>
       <Container maxWidth={"xl"}>
         <Stack direction={"row"}>
           <Grid item lg={4}>

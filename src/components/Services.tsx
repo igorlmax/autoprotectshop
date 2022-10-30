@@ -14,8 +14,8 @@ const Services = () => {
 
   return (
     <>
-      <Container maxWidth={"xl"} style={{marginTop: 35, marginBottom: 35}}>
-        <Grid container>
+      <Container maxWidth={"xl"}>
+        <Grid container py={6}>
           <Grid item lg>
             <Stack
               direction={"row"}

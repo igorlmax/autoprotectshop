@@ -5,7 +5,7 @@ const ServiceCard = ({ icon, title, description }: any) => {
   return (
     <Stack direction={"column"} spacing={2} flexWrap={"wrap"}>
       {icon}
-      <Typography variant={"body1"} fontWeight={"700"}>
+      <Typography style={{fontSize: 16}} fontWeight={"500"}>
         {title}
       </Typography>
       <Typography variant={"subtitle2"}>{description}</Typography>
