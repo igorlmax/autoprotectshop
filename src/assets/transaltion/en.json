@@ -9,5 +9,27 @@
     "aboutUs": "About us",
     "languages": "Languages",
     "contact": "Contact us"
+  },
+  "hero": {
+    "payPerKm": "Pay-per-kilemeter",
+    "payFullPrice": "Never pay full price again",
+    "pointOne": "Insure your car from 1 cent per km",
+    "pointTwo": "Save through mileage-based billing",
+    "pointThree": "Money back automatically if less driven",
+    "getQuote": "Get Quote"
+  },
+  "services": {
+    "parkingDamage": "Parking damage",
+    "parkingDamageDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "assistance": "Assistance",
+    "assistanceDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "bonusProtection": "Bonus protection",
+    "bonusProtectionDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "purchasePriceProtection": "Purchase price protection",
+    "purchasePriceProtectionDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "ownDamage": "Own damage",
+    "ownDamageDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "innerSpace": "Inner space",
+    "innerSpaceDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews."
   }
 }

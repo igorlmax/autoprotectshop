@@ -2,6 +2,11 @@ import React from "react";
 import { createTheme } from "@mui/material";
 
 export const ThemeConfig = createTheme({
+  mixins: {
+    toolbar: {
+      minHeight: 72
+    }
+  },
   components: {
     // Name of the component
     MuiButtonBase: {

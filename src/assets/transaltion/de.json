@@ -7,5 +7,13 @@
     "Hotline": "Hotline",
     "reportDamage": "Report damage",
     "login": "Login"
+  },
+  "services": {
+    "parkingDamage": "Parkschaden",
+    "assistance": "Assistance",
+    "bonusProtection": "Bonusschutz",
+    "purchasePriceProtection": "Kaufpreisschutz",
+    "pointThree": "Eigenschäden",
+    "innerSpace": "Innenraum"
   }
 }

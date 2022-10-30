@@ -9,13 +9,11 @@ import { Container, CssBaseline } from "@mui/material";
 function App() {
   return (
     <>
-        <Navigation />
+      <Navigation />
       <CssBaseline />
-      <Container maxWidth={false}>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-      </Container>
       <Footer />
     </>
   );
