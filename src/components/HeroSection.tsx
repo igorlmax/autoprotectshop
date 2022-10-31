@@ -10,6 +10,7 @@ import {
 import { useTranslation } from "react-multi-lang";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import carLoan from "../assets/images/icons8-car-roof-box-100.png";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const t = useTranslation();
@@ -49,13 +50,15 @@ const HeroSection = () => {
                 {t("hero.pointThree")}
               </Grid>
 
-              <Button
-                variant={"contained"}
-                style={{ borderRadius: 50 }}
-                size={"large"}
-              >
-                {t("navigation.getQuote")}
-              </Button>
+              <Link to={"/quote"} style={{ textDecoration: "none" }}>
+                <Button
+                  variant={"contained"}
+                  style={{ borderRadius: 50 }}
+                  size={"large"}
+                >
+                  {t("navigation.getQuote")}
+                </Button>
+              </Link>
             </Stack>
           </Grid>
           <Grid item lg={6}>

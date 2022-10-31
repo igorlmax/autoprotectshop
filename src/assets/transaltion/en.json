@@ -36,5 +36,11 @@
     "trustExperts": "Simply trust experts",
     "pricePerformance": "Insure your car with the price-performance winner",
     "calculateCarInsurance": "Calculate car insurance now"
+  },
+  "newsletter": {
+    "heading": "Wechsel-Alarm: Wir erinnern dich gerne",
+    "title": "Du kannst aktuell nicht deine Autoversicherung wechseln? Melde dich gerne für den FRIDAY-Newsletter an und erhalte Informationen zu Produktneuheiten, limitierten Aktionen, persönliche Angebote und nützliche Tipps rund ums Thema Versicherungen.",
+    "register": "Anmelden",
+    "unsubscribe": "Du kannst dich jederzeit mit dem Abmeldelink in unseren E-Mails oder über unser Kontaktformular abmelden. Weitere Abmeldemöglichkeiten findest Du hier."
   }
 }

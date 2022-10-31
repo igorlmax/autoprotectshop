@@ -22,6 +22,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import ElectricCarIcon from "@mui/icons-material/ElectricCar";
 import SwapVerticalCircleIcon from "@mui/icons-material/SwapVerticalCircle";
+import { Link } from "react-router-dom";
 
 setTranslations({ de, en });
 setDefaultLanguage("en");
@@ -42,65 +43,71 @@ const Navigation = () => {
   return (
     <>
       <AppBar position={"relative"} color="transparent">
-        <Container maxWidth={'xl'}>
-        <Toolbar>
-          <IconButton size={"large"} edge="start" aria-label="menu">
-            <ElectricCarIcon color={"primary"} />
-          </IconButton>
-          <Typography
-            variant="h6"
-            color="inherit"
-            component="div"
-            sx={{ flexGrow: 1 }}
-          >
-            {t("appName")}
-          </Typography>
-          <Stack direction="row" spacing={2}>
-            <Button
-              variant="outlined"
-              color="primary"
-              style={{ borderRadius: 50 }}
+        <Container maxWidth={"xl"}>
+          <Toolbar>
+            <Link to={"/"} style={{ textDecoration: "none" }}>
+              <IconButton size={"large"} edge="start" aria-label="menu">
+                <ElectricCarIcon color={"primary"} />
+              </IconButton>
+            </Link>
+            <Typography
+              variant="h6"
+              color="inherit"
+              component="div"
+              sx={{ flexGrow: 1 }}
             >
-              {t("navigation.getQuote")}
-            </Button>
-            <Button color="inherit">{t("navigation.reportDamage")}</Button>
-            <Button color="inherit">{t("navigation.Help")}</Button>
-            <Button color="inherit">{t("navigation.contact")}</Button>
-            <Button color="inherit">{t("navigation.aboutUs")}</Button>
-            <Button
-              variant={"contained"}
-              startIcon={<LocalPhoneIcon />}
-              style={{ borderRadius: 50 }}
-            >
-              {t("navigation.getQuote")}
-            </Button>
-
-            <Button
-              aria-controls={open ? "basic-menu" : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClick}
-            >
-              <LanguageIcon />
-            </Button>
-            <Menu
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-                "aria-labelledby": "basic-button",
-              }}
-            >
-              <MenuItem
-                sx={{ width: 120 }}
-                onClick={() => setTranslations({ de })}
+              <Link to={"/"} style={{ textDecoration: "none" }}>
+                {t("appName")}
+              </Link>
+            </Typography>
+            <Stack direction="row" spacing={2}>
+              <Button
+                variant="outlined"
+                color="primary"
+                style={{ borderRadius: 50 }}
               >
-                DE
-              </MenuItem>
-              <MenuItem onClick={() => setTranslations({ en })}>EN</MenuItem>
-            </Menu>
-          </Stack>
-        </Toolbar>
+                <Link to={"/quote"} style={{ textDecoration: "none" }}>
+                  {t("navigation.getQuote")}
+                </Link>
+              </Button>
+              <Button color="inherit">{t("navigation.reportDamage")}</Button>
+              <Button color="inherit">{t("navigation.Help")}</Button>
+              <Button color="inherit">{t("navigation.contact")}</Button>
+              <Button color="inherit">{t("navigation.aboutUs")}</Button>
+              <Button
+                variant={"contained"}
+                startIcon={<LocalPhoneIcon />}
+                style={{ borderRadius: 50 }}
+              >
+                {t("navigation.Hotline")}
+              </Button>
+
+              <Button
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClick}
+              >
+                <LanguageIcon />
+              </Button>
+              <Menu
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                  "aria-labelledby": "basic-button",
+                }}
+              >
+                <MenuItem
+                  sx={{ width: 120 }}
+                  onClick={() => setTranslations({ de })}
+                >
+                  DE
+                </MenuItem>
+                <MenuItem onClick={() => setTranslations({ en })}>EN</MenuItem>
+              </Menu>
+            </Stack>
+          </Toolbar>
         </Container>
       </AppBar>
     </>
