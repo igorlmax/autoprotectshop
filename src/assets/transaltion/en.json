@@ -42,5 +42,17 @@
     "title": "Du kannst aktuell nicht deine Autoversicherung wechseln? Melde dich gerne für den FRIDAY-Newsletter an und erhalte Informationen zu Produktneuheiten, limitierten Aktionen, persönliche Angebote und nützliche Tipps rund ums Thema Versicherungen.",
     "register": "Anmelden",
     "unsubscribe": "Du kannst dich jederzeit mit dem Abmeldelink in unseren E-Mails oder über unser Kontaktformular abmelden. Weitere Abmeldemöglichkeiten findest Du hier."
+  },
+  "fq": {
+    "1panelHeading": "Heading",
+    "1panelParagraph": "lorem",
+    "2panelHeading": "Heading 2",
+    "2panelParagraph": "lorem 2",
+    "3panelHeading": "Heading 3",
+    "3panelParagraph": "lorem 3",
+    "4panelHeading": "Heading 4",
+    "4panelParagraph": "lorem 4",
+    "5panelHeading": "Heading 5",
+    "5panelParagraph": "lorem 5"
   }
 }

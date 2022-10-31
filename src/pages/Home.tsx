@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection';
 import Services from '../components/Services';
 import Featured from '../components/Featured';
 import Newsletter from '../components/Newsletter';
+import FqSection from '../components/FQSection';
 
 const Home = () => {
   return <>
@@ -10,6 +11,7 @@ const Home = () => {
     <Services/>
     <Featured/>
     <Newsletter/>
+    <FqSection/>
   </>;
 };
 
