@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import carLoan from "../assets/images/icons8-car-roof-box-100.png";
 import { useTranslation } from "react-multi-lang";
+import { Link } from 'react-router-dom';
 
 const Featured = () => {
   const t = useTranslation();
@@ -49,6 +50,8 @@ const Featured = () => {
                 {t("featured.pricePerformance")}
               </Typography>
 
+              <Link to={"/quote"} style={{ textDecoration: "none" }}>
+
               <Button
                 variant={"outlined"}
                 style={{ borderRadius: 50, marginTop: 32 }}
@@ -56,6 +59,7 @@ const Featured = () => {
               >
                 {t("featured.calculateCarInsurance")}
               </Button>
+              </Link>
             </Stack>
           </Grid>
         </Stack>

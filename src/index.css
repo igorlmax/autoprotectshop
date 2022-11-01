@@ -7,3 +7,12 @@ html, body {
 }
 
 
+
+.css-1s2u09g-control {
+  border-color: white !important;
+}
+
+input[type="text"]
+{
+  border: white !important;
+}

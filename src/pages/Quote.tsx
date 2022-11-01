@@ -1,20 +1,30 @@
 import React from "react";
 import * as Yup from "yup";
 import {
-  FormikStepper,
-  FormikStep,
-  InputField,
   CheckBoxField,
+  FormikHelpers,
+  FormikStep,
+  FormikStepper,
+  InputField,
   RadioField,
   SelectField,
-  FormikHelpers,
 } from "formik-stepper";
 import "formik-stepper/dist/style.css";
-import { Container, Grid } from "@mui/material";
-import { IoAdd, IoBalloonSharp } from "react-icons/io5";
+import { useFormik } from "formik";
+import { Container, Grid, Stack, useTheme } from '@mui/material';
 import { carList } from "../assets/data/car-list";
 import { FaCheck } from "react-icons/fa";
 import { BsPencilFill } from "react-icons/bs";
+import { useTranslation } from "react-multi-lang";
+import { AiOutlineFileDone } from "react-icons/ai";
+import styled from "@emotion/styled";
+
+export const CustomInput = styled.input`
+  width: 300px;
+  height: 35px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+`;
 
 const validationSchema = Yup.object().shape({
   brand: Yup.string().required("The Brand field is required"),
@@ -39,14 +49,39 @@ const validationSchema = Yup.object().shape({
 
   kmPerYear: Yup.string().required("The km per year field is required"),
 
-  // firstName: Yup.string().required("The Firstname field is required"),
-  // lastName: Yup.string().required("The Lastname field is required"),
-  // birthDate: Yup.string().required("The Birth date type field is required"),
-  // zip: Yup.string().required("The zip field is required"),
-  //
+  firstName: Yup.string().required("The Firstname field is required"),
+  lastName: Yup.string().required("The Lastname field is required"),
+  birthDate: Yup.string().required("The Birth date type field is required"),
+  zip: Yup.string().required("The zip field is required"),
 });
 
+const initialValues = {
+  brand: "",
+  model: "",
+  registrationMonth: "",
+  registrationYear: "",
+  fuel: "",
+  transmission: "",
+  horsepower: "",
+  accident: "",
+  kmPerYear: "",
+  firstName: "",
+  lastName: "",
+  birthDate: "",
+  zip: "",
+};
+
 const Quote = () => {
+  const t = useTranslation();
+  const theme = useTheme();
+  const formik = useFormik({
+    initialValues: initialValues,
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      console.log("output: ", values);
+    },
+  });
+
   const onSubmit = async (
     values: any,
     { setSubmitting }: FormikHelpers<any>
@@ -56,148 +91,191 @@ const Quote = () => {
 
   return (
     <>
-      <Container maxWidth={"xl"}>
-        <FormikStepper
-          onSubmit={onSubmit}
-          initialValues={{
-            brand: "",
-            model: "",
-            registrationMonth: "",
-            registrationYear: "",
-            fuel: "",
-            transmission: "",
-            horsepower: "",
-            accident: "",
-            kmPerYear: "",
-            firstName: "",
-            lastName: "",
-            birthDate: "",
-            zip: "",
-          }}
-          validationSchema={validationSchema}
-          withStepperLine={true}
-          nextButton={{ label: "Next" }}
-          prevButton={{ label: "Back" }}
-          submitButton={{ label: "Done" }}
-        >
-          <FormikStep
-            label="Section Info"
-            Icon={({ active, done }) => {
-              console.log({ active, done });
-              if (active) return <BsPencilFill />;
-              else return <FaCheck />;
+      <Grid container style={{ backgroundColor: theme.palette.primary.light }}>
+        <Container maxWidth={"md"}>
+          <FormikStepper
+            onSubmit={onSubmit}
+            initialValues={{
+              brand: "",
+              model: "",
+              registrationMonth: "",
+              registrationYear: "",
+              fuel: "",
+              transmission: "",
+              horsepower: "",
+              accident: "",
+              kmPerYear: "",
+              firstName: "",
+              lastName: "",
+              birthDate: "",
+              zip: "",
+            }}
+            validationSchema={validationSchema}
+            withStepperLine={true}
+            nextButton={{
+              style: {
+                backgroundColor: theme.palette.primary.main,
+                borderRadius: 50,
+              },
+              label: t("quote.next"),
+            }}
+            prevButton={{
+              style: {
+                backgroundColor: theme.palette.primary.main,
+                borderRadius: 50,
+              },
+              label: t("quote.back"),
+            }}
+            submitButton={{
+              style: {
+                backgroundColor: theme.palette.primary.main,
+                borderRadius: 50,
+              },
+              label: t("quote.done"),
             }}
           >
-            <SelectField
-              name="brand"
-              label="Car Brand"
-              options={carList.map((car) => {
-                return { value: car.brand, label: car.brand };
-              })}
-            />
-            <SelectField
-              name="model"
-              label="Car Brand"
-              options={carList.map((car) => {
-                return { value: car.brand, label: car.brand };
-              })}
-            />
+            <FormikStep
+              circleColor="#7e57c2"
+              label={t("quote.vehicleInfo")}
+              Icon={({ active, done }) => {
+                console.log({ active, done });
+                if (active) return <BsPencilFill />;
+                else return <FaCheck />;
+              }}
+            >
+              <SelectField
+                name="brand"
+                label="Car Brand"
+                options={carList.map((car) => {
+                  return { value: car.brand, label: car.brand };
+                })}
+              />
+              <SelectField
+                name="model"
+                label="Car Brand"
+                options={carList.map((car) => {
+                  return { value: car.brand, label: car.brand };
+                })}
+              />
 
-            <InputField
-              name="registrationMonth"
-              label="Year of registration"
-              floating
-              type="text"
-              placeholder="MM.YYYY"
-            />
-            <InputField
-              name="registrationYear"
-              label="Month of registration"
-              floating
-              type="text"
-              placeholder="MM.YYYY"
-            />
-          </FormikStep>
-          <FormikStep
-            label="Section Info 3"
-            Icon={({ active, done }) => {
-              console.log({ active, done });
-              if (active) return <BsPencilFill />;
-              else return <FaCheck />;
-            }}
-          >
-            <RadioField
-              name="fuel"
-              label="Fuel type"
-              options={[
-                { label: "electricity", value: "electricity" },
-                { label: "diesel.", value: "diesel" },
-                { label: "petrol", value: "petrol" },
-                { label: "different", value: "different" },
-              ]}
-            />
+              <Stack direction={'row'} justifyContent={'stretch'}>
+              <InputField
+                  label="Year of registration"
 
-            <RadioField
-              name="transmission"
-              label="Transmission"
-              options={[
-                { label: "manual", value: "manual" },
-                { label: "automatic", value: "automatic" },
-              ]}
-            />
+                  name="registrationMonth"
+                type="text"
+                placeholder="MM.YYYY"
+              />
+              <InputField
+                  label="Month of registration"
 
-            <SelectField
-              name="horsepower"
-              label="Horsepower"
-              options={[
-                { label: "manual", value: "manual" },
-                { label: "automatic", value: "automatic" },
-              ]}
-            />
-          </FormikStep>
+                  name="registrationYear"
+                type="text"
+                placeholder="MM.YYYY"
+              />
+              </Stack>
+            </FormikStep>
+            <FormikStep
+              circleColor="#7e57c2"
+              label={t("quote.engineSpec")}
+              Icon={({ active, done }) => {
+                console.log({ active, done });
+                if (active) return <BsPencilFill />;
+                else return <FaCheck />;
+              }}
+            >
+              <RadioField
+                name="fuel"
+                label="Fuel type"
+                options={[
+                  { label: "electricity", value: "electricity" },
+                  { label: "diesel.", value: "diesel" },
+                  { label: "petrol", value: "petrol" },
+                  { label: "different", value: "different" },
+                ]}
+              />
 
-          <FormikStep
-            label="Section Info 3"
-            Icon={({ active, done }) => {
-              console.log({ active, done });
-              if (active) return <BsPencilFill />;
-              else return <FaCheck />;
-            }}
-          >
-            <CheckBoxField name="accident" label="Accident" />
-            <InputField
-              name="kmPerYear"
-              label="Km per year"
-              floating
-              type="text"
-            />
-          </FormikStep>
+              <RadioField
+                name="transmission"
+                label="Transmission"
+                options={[
+                  { label: "manual", value: "manual" },
+                  { label: "automatic", value: "automatic" },
+                ]}
+              />
 
-          <FormikStep
-            label="Section Info 3"
-            Icon={({ active, done }) => {
-              console.log({ active, done });
-              if (active) return <BsPencilFill />;
-              else return <FaCheck />;
-            }}
-          >
-            <InputField
-              name="firstName"
-              label="Firstname"
-              floating
-              type="text"
-            />
-            <InputField name="lastName" label="Lastname" floating type="text" />
-            <InputField
-              name="birthDate"
-              label="Date of birth"
-              floating
-              type="text"
-            />
-            <InputField name="zip" label="Zip code" floating type="text" />
-          </FormikStep>
-        </FormikStepper>
-      </Container>
+              <SelectField
+                name="horsepower"
+                label="Horsepower"
+                options={[
+                  { label: "manual", value: "manual" },
+                  { label: "automatic", value: "automatic" },
+                ]}
+              />
+            </FormikStep>
+
+            <FormikStep
+              circleColor="#7e57c2"
+              label={t("quote.insuranceCover")}
+              Icon={({ active, done }) => {
+                console.log({ active, done });
+                if (active) return <BsPencilFill />;
+                else return <FaCheck />;
+              }}
+            >
+              <CheckBoxField name="accident" label="Accident" />
+              <InputField
+                name="kmPerYear"
+                label="Km per year"
+                floating
+                type="text"
+              />
+            </FormikStep>
+
+            <FormikStep
+              circleColor="#7e57c2"
+              label={t("quote.personalInfo")}
+              Icon={({ active, done }) => {
+                console.log({ active, done });
+                if (active) return <BsPencilFill />;
+                else return <FaCheck />;
+              }}
+            >
+              <InputField
+                name="firstName"
+                label="Firstname"
+                floating
+                type="text"
+              />
+              <InputField
+                name="lastName"
+                label="Lastname"
+                floating
+                type="text"
+              />
+              <InputField
+                name="birthDate"
+                label="Date of birth"
+                floating
+                type="text"
+              />
+              <InputField name="zip" label="Zip code" floating type="text" />
+            </FormikStep>
+
+            <FormikStep
+              circleColor="#7e57c2"
+              label={t("quote.confirmation")}
+              Icon={({ active, done }) => {
+                console.log({ active, done });
+                if (active) return <AiOutlineFileDone />;
+                else return <FaCheck />;
+              }}
+            >
+              <h2>Your all done!</h2>
+            </FormikStep>
+          </FormikStepper>
+        </Container>
+      </Grid>
     </>
   );
 };

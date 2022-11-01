@@ -43,6 +43,16 @@
     "register": "Anmelden",
     "unsubscribe": "Du kannst dich jederzeit mit dem Abmeldelink in unseren E-Mails oder über unser Kontaktformular abmelden. Weitere Abmeldemöglichkeiten findest Du hier."
   },
+  "quote": {
+    "vehicleInfo": "Vehicle Info",
+    "engineSpec": "Engine spec",
+    "insuranceCover": "Insurance cover",
+    "personalInfo": "Personal info",
+    "confirmation": "Confirmation",
+    "next": "Next",
+    "back": "Back",
+    "done": "Done"
+  },
   "fq": {
     "1panelHeading": "Heading",
     "1panelParagraph": "lorem",

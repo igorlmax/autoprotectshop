@@ -5,7 +5,7 @@ export const ThemeConfig = createTheme({
   typography: {
     allVariants: {
       fontFamily: "Rubik",
-      textTransform: 'none'
+      textTransform: "none",
     },
   },
   mixins: {
@@ -18,14 +18,14 @@ export const ThemeConfig = createTheme({
     MuiButtonBase: {
       defaultProps: {
         // The props to change the default for.
-        disableRipple: true, // No more ripple, on the whole application 💣!
+        disableRipple: true, // No more ripple, on the whole application
       },
     },
   },
   palette: {
     primary: {
       main: "#7e57c2",
-      light: "",
+      light: "#f8f6fc",
       dark: "",
     },
     secondary: {
