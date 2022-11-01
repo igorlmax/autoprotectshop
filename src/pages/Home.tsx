@@ -4,6 +4,7 @@ import Services from '../components/Services';
 import Featured from '../components/Featured';
 import Newsletter from '../components/Newsletter';
 import FqSection from '../components/FQSection';
+import Pricing from '../components/Pricing';
 
 const Home = () => {
   return <>
@@ -11,6 +12,7 @@ const Home = () => {
     <Services/>
     <Featured/>
     <Newsletter/>
+    <Pricing/>
     <FqSection/>
   </>;
 };

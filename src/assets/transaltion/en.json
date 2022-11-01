@@ -64,5 +64,8 @@
     "4panelParagraph": "lorem 4",
     "5panelHeading": "Heading 5",
     "5panelParagraph": "lorem 5"
+  },
+  "pricing": {
+    "learnMore": "Learn more"
   }
 }
