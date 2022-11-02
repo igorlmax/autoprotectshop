@@ -67,5 +67,17 @@
   },
   "pricing": {
     "learnMore": "Learn more"
+  },
+  "facilities": {
+    "column1": "column",
+    "column2": "column",
+    "column3": "column",
+    "facilityTest1": "lorem",
+    "facilityTest2": "lorem",
+    "facilityTest3": "lorem",
+    "facilityTest4": "lorem",
+    "facilityTest5": "lorem",
+    "facilityTest6": "lorem",
+    "facilityTest7": "lorem"
   }
 }

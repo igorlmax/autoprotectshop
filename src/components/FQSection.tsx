@@ -4,8 +4,6 @@ import {
   AccordionDetails,
   AccordionSummary,
   Container,
-  Grid,
-  Stack,
   Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -24,6 +22,9 @@ const FqSection = () => {
   return (
     <>
       <Container maxWidth={"lg"} style={{ height: 400, marginTop: "35px" }}>
+        <Typography align={"center"} variant={"h2"}>
+          FAQs
+        </Typography>
         <Accordion
           expanded={expanded === "panel1"}
           onChange={handleChange("panel1")}

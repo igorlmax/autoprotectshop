@@ -34,6 +34,8 @@ const Pricing = () => {
               features={["feature1", "feature2", "feature3"]}
             />
           </Stack>
+
+
         </Grid>
       </Grid>
     </>

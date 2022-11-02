@@ -11,7 +11,7 @@ import {
 } from "formik-stepper";
 import "formik-stepper/dist/style.css";
 import { useFormik } from "formik";
-import { Container, Grid, Stack, useTheme } from '@mui/material';
+import { Container, Grid, Stack, useTheme } from "@mui/material";
 import { carList } from "../assets/data/car-list";
 import { FaCheck } from "react-icons/fa";
 import { BsPencilFill } from "react-icons/bs";
@@ -158,21 +158,19 @@ const Quote = () => {
                 })}
               />
 
-              <Stack direction={'row'} justifyContent={'stretch'}>
-              <InputField
+              <Stack direction={"row"} justifyContent={"stretch"}>
+                <InputField
                   label="Year of registration"
-
                   name="registrationMonth"
-                type="text"
-                placeholder="MM.YYYY"
-              />
-              <InputField
+                  type="text"
+                  placeholder="MM.YYYY"
+                />
+                <InputField
                   label="Month of registration"
-
                   name="registrationYear"
-                type="text"
-                placeholder="MM.YYYY"
-              />
+                  type="text"
+                  placeholder="MM.YYYY"
+                />
               </Stack>
             </FormikStep>
             <FormikStep
