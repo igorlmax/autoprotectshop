@@ -26,7 +26,7 @@ export const ThemeConfig = createTheme({
     primary: {
       main: "#7e57c2",
       light: "#f8f6fc",
-      dark: "",
+      dark: "#363145",
     },
     secondary: {
       main: "#ffe24f",

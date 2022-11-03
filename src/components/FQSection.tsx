@@ -3,9 +3,9 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Container,
+  Container, Grid,
   Typography,
-} from "@mui/material";
+} from '@mui/material';
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useTranslation } from "react-multi-lang";
 
@@ -21,6 +21,8 @@ const FqSection = () => {
   };
   return (
     <>
+      <Grid container style={{ backgroundColor: "#f7f7f9" }}>
+
       <Container maxWidth={"lg"} style={{ height: 400, marginTop: "35px" }}>
         <Typography align={"center"} variant={"h2"}>
           FAQs
@@ -113,6 +115,7 @@ const FqSection = () => {
           </AccordionDetails>
         </Accordion>
       </Container>
+      </Grid>
     </>
   );
 };

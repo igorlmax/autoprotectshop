@@ -1,30 +1,37 @@
 import React from "react";
 import {
+  Box,
   Button,
   Container,
   Grid,
   Stack,
   Typography,
   useTheme,
-} from "@mui/material";
-import carLoan from "../assets/images/icons8-car-roof-box-100.png";
+} from '@mui/material';
+import longTerm from "../assets/images/long-term.png";
 import { useTranslation } from "react-multi-lang";
 import { Link } from 'react-router-dom';
 
 const Featured = () => {
   const t = useTranslation();
-  const theme = useTheme();
 
   return (
     <Grid container style={{ backgroundColor: "#f7f7f9" }} py={3}>
       <Container maxWidth={"xl"}>
         <Stack direction={"row"}>
           <Grid item lg={4}>
-            <Stack direction="column" spacing={2} alignItems="center">
-              <Stack>
-                <img src={carLoan} />
-              </Stack>
-            </Stack>
+            <Box
+                sx={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+            >
+              <img src={longTerm} />
+            </Box>
+
           </Grid>
           <Grid item lg={6}>
             <Stack

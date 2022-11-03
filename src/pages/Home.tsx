@@ -13,8 +13,8 @@ const Home = () => {
     <Services/>
     <Featured/>
     <SpecTable/>
-    <Newsletter/>
     <Pricing/>
+    <Newsletter/>
     <FqSection/>
   </>;
 };

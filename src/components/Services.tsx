@@ -21,9 +21,9 @@ const Services = () => {
               direction={"row"}
               justifyContent={"center"}
               alignItems={"center"}
-              spacing={3}
+              spacing={6}
             >
-              <Stack direction={"column"} spacing={3}>
+              <Stack direction={"column"} spacing={6}>
                 <ServiceCard
                   icon={
                     <CarCrashRoundedIcon
@@ -48,7 +48,7 @@ const Services = () => {
                 />
               </Stack>
 
-              <Stack direction={"column"} spacing={3}>
+              <Stack direction={"column"} spacing={6}>
                 <ServiceCard
                   icon={
                     <SavingsIcon
@@ -73,7 +73,7 @@ const Services = () => {
                 />
               </Stack>
 
-              <Stack direction={"column"} spacing={3}>
+              <Stack direction={"column"} spacing={6}>
                 <ServiceCard
                   icon={
                     <MinorCrashIcon
