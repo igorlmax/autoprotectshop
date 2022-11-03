@@ -8,12 +8,16 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { IoIosCheckmarkCircle } from "react-icons/io";
-import { ImInfo } from "react-icons/im";
-import { Button, Container, Grid, TableFooter, Typography, useTheme } from '@mui/material';
+import {
+  Container,
+  Grid,
+  TableFooter,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import { useTranslation } from "react-multi-lang";
-import { BiInfoCircle } from 'react-icons/bi';
-import { Link } from 'react-router-dom';
-
+import { BiInfoCircle } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -39,7 +43,7 @@ function createData(
   title: string,
   icon: any,
   action1: boolean,
-  action2: boolean,
+  action2: boolean
 ) {
   return {
     title,
@@ -48,8 +52,6 @@ function createData(
     action2,
   };
 }
-
-
 
 const SpecTable = () => {
   const t = useTranslation();
@@ -66,16 +68,24 @@ const SpecTable = () => {
   ];
 
   return (
-    <Grid container  style={{ backgroundColor: theme.palette.primary.light }} p={10}>
+    <Grid
+      container
+      style={{ backgroundColor: theme.palette.primary.light }}
+      p={10}
+    >
       <Container maxWidth={"md"}>
-        <TableContainer component={Paper} >
+        <TableContainer component={Paper}>
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
               <TableRow>
                 <StyledTableCell>{t("facilities.column1")}</StyledTableCell>
-                <StyledTableCell align="center"/>
-                <StyledTableCell align="center">{t("facilities.column2")}</StyledTableCell>
-                <StyledTableCell align="center">{t("facilities.column3")}</StyledTableCell>
+                <StyledTableCell align="center" />
+                <StyledTableCell align="center">
+                  {t("facilities.column2")}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  {t("facilities.column3")}
+                </StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -97,34 +107,33 @@ const SpecTable = () => {
                       <IoIosCheckmarkCircle color={"#10a258"} fontSize={24} />
                     ) : null}
                   </StyledTableCell>
-
                 </StyledTableRow>
               ))}
             </TableBody>
             <TableFooter>
               <TableRow>
-                <StyledTableCell/>
-                <StyledTableCell align="center"/>
+                <StyledTableCell />
+                <StyledTableCell align="center" />
                 <StyledTableCell align="center">
                   <Link to={"/quote"} style={{ textDecoration: "none" }}>
-                    <Button
-                        variant={"contained"}
-                        style={{ borderRadius: 50 }}
-                        size={"large"}
+                    <Typography
+                      color={theme.palette.primary.main}
+                      fontSize={14}
                     >
-                      <Typography fontSize={14}>{t("pricing.learnMore")}</Typography>
-                    </Button>
+                      {t("pricing.learnMore")}
+                    </Typography>
                   </Link>
                 </StyledTableCell>
-                <StyledTableCell align="center"><Link to={"/quote"} style={{ textDecoration: "none" }}>
-                  <Button
-                      variant={"contained"}
-                      style={{ borderRadius: 50 }}
-                      size={"large"}
-                  >
-                    <Typography fontSize={14}>{t("pricing.learnMore")}</Typography>
-                  </Button>
-                </Link></StyledTableCell>
+                <StyledTableCell align="center">
+                  <Link to={"/quote"} style={{ textDecoration: "none" }}>
+                    <Typography
+                      color={theme.palette.primary.main}
+                      fontSize={14}
+                    >
+                      {t("pricing.learnMore")}
+                    </Typography>
+                  </Link>
+                </StyledTableCell>
               </TableRow>
             </TableFooter>
           </Table>
