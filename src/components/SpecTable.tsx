@@ -62,15 +62,17 @@ const SpecTable = () => {
     createData(t("facilities.facilityTest2"), "icon", true, true),
     createData(t("facilities.facilityTest3"), "icon", true, true),
     createData(t("facilities.facilityTest4"), "icon", true, true),
-    createData(t("facilities.facilityTest5"), "icon", true, false),
-    createData(t("facilities.facilityTest6"), "icon", true, false),
+    createData(t("facilities.facilityTest5"), "icon", true, true),
+    createData(t("facilities.facilityTest6"), "icon", true, true),
     createData(t("facilities.facilityTest7"), "icon", true, false),
+    createData(t("facilities.facilityTest8"), "icon", true, false),
+    createData(t("facilities.facilityTest9"), "icon", true, false),
+    createData(t("facilities.facilityTest10"), "icon", true, false),
   ];
 
   return (
     <Grid
       container
-      style={{ backgroundColor: theme.palette.primary.light }}
       p={10}
     >
       <Container maxWidth={"md"}>

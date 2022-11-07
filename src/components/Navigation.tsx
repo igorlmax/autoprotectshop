@@ -12,10 +12,10 @@ import {
   useTheme,
 } from "@mui/material";
 import {
-  setDefaultLanguage,
+  setDefaultLanguage, setLanguage,
   setTranslations,
   useTranslation,
-} from "react-multi-lang";
+} from 'react-multi-lang';
 import de from "../assets/transaltion/de.json";
 import en from "../assets/transaltion/en.json";
 import LanguageIcon from "@mui/icons-material/Language";
@@ -25,7 +25,7 @@ import SwapVerticalCircleIcon from "@mui/icons-material/SwapVerticalCircle";
 import { Link } from "react-router-dom";
 
 setTranslations({ de, en });
-setDefaultLanguage("en");
+setDefaultLanguage("de");
 
 const Navigation = () => {
   const theme = useTheme();
@@ -100,11 +100,11 @@ const Navigation = () => {
               >
                 <MenuItem
                   sx={{ width: 120 }}
-                  onClick={() => setTranslations({ de })}
+                  onClick={() => setLanguage('de')}
                 >
                   DE
                 </MenuItem>
-                <MenuItem onClick={() => setTranslations({ en })}>EN</MenuItem>
+                <MenuItem onClick={() => setLanguage('en')}>EN</MenuItem>
               </Menu>
             </Stack>
           </Toolbar>

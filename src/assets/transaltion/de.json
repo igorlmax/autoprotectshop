@@ -1,15 +1,57 @@
 {
+  "appName": "Versicherung",
+
   "services": {
     "parkingDamage": "Parkschaden",
     "assistance": "Assistance",
     "bonusProtection": "Bonusschutz",
     "purchasePriceProtection": "Kaufpreisschutz",
     "pointThree": "Eigenschäden",
-    "innerSpace": "Innenraum"
+    "innerSpace": "Innenraum",
+
+    "heading": "Bei uns erhalten Sie den besten Versicherungsschutz mit vielen Vorteilen.",
+    "subHeading": "Alles, was Sie brauchen.",
+    "parkingDamageDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "assistanceDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "bonusProtectionDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "purchasePriceProtectionDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "ownDamage": "Own damage",
+    "ownDamageDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "innerSpaceDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews."
   },
   "featured": {
     "trustExperts": "Einfach Experten vertrauen",
     "pricePerformance": "Versichere dein Auto beim Preis-Leistungs-Sieger",
     "calculateCarInsurance": "Jetzt Autoversicherung berechnen"
+  },
+  "fq": {
+    "1panelHeading": "Wie löse ich ein Auto ein?",
+    "1panelParagraph": " ",
+    "2panelHeading": "Kann ich ein Wohnmobil bei Ihnen versichern?",
+    "2panelParagraph": "Ja, die Zurich Motorfahrzeugversicherung kommt für Wohnmobile infrage. Der Versicherungsschutz kann individuell vereinbart werden, wobei die Berechnung der Prämie nicht online möglich ist. Rufen Sie uns zu diesem Zweck unter 0800 80 80 80 an oder kontaktieren Sie Ihre Beraterin bzw. Ihren Berater. Wir unterbreiten Ihnen gerne ein Angebot.",
+    "3panelHeading": "Was ist der Unterschied zwischen den Versicherungsvarianten Parkschaden und Parkschaden PLUS?",
+    "3panelParagraph": "Diese beiden Versicherungen unterscheiden sich im Deckungsbetrag. Während sie beide für Schäden aufkommen, die von unbekannten Fahrzeugen oder Personen an Ihrem parkierten Fahrzeug verursacht wurden – bei beiden Versicherungen bis zu zwei Schadenfälle pro Jahr – liegt der Höchstbetrag bei der Option Parkschaden bei 1’000 Franken pro Schadenfall. Bei Parkschaden PLUS hingegen besteht keine Limite beim Betrag.",
+    "4panelHeading": "Bin ich auch im Ausland geschützt?",
+    "4panelParagraph": "Die Versicherung gilt in der Schweiz und im Fürstentum Liechtenstein sowie in vielen Staaten Europas und Mittelmeeranrainer- und Inselstaaten. In folgenden Staaten gilt sie dabei nicht: Weissrussland, Moldawien, Ukraine, Russische Föderation, Georgien, Armenien, Aserbeidschan, Kasachstan, Ägypten, Algerien, Libanon, Libyen und Syrien.",
+    "5panelHeading": "Was kostet die Pannenhilfe?",
+    "5panelParagraph": "Sie können zwischen wenigen Deckungen wählen, basierend auf Ihrer persönlichen Kalkulation."
+  },
+  "pricing": {
+    "learnMore": "Mehr erfahren"
+  },
+  "facilities": {
+    "column1": " ",
+    "column2": "Vollkasko",
+    "column3": "Teilkasko",
+    "facilityTest1": "Sach- und Vermögensschäden",
+    "facilityTest2": "Personenschäden",
+    "facilityTest3": "Eigenschadendeckung",
+    "facilityTest4": "Glasschaden",
+    "facilityTest5": "Naturschäden",
+    "facilityTest6": "Brand und Explosion",
+    "facilityTest7": "Vandalismus",
+    "facilityTest8": "Tierschäden",
+    "facilityTest9": "Grobe Fahrlässigkeit",
+    "facilityTest10": "Selbstverschuldete Unfälle"
   }
 }

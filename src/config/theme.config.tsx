@@ -3,6 +3,14 @@ import { createTheme } from "@mui/material";
 
 export const ThemeConfig = createTheme({
   typography: {
+    h2: {
+      fontSize: '36px',
+      fontWeight: '300'
+    },
+    h4: {
+      fontSize: '24px',
+      fontWeight: '300'
+    },
     allVariants: {
       fontFamily: "Rubik",
       textTransform: "none",

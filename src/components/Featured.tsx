@@ -42,7 +42,8 @@ const Featured = () => {
               alignItems="flex-start"
             >
               <Typography
-                  fontWeight={100}
+                  variant='h2'
+                  // fontWeight={100}
                   fontSize={'x-large'}
               >
                 {t("featured.trustExperts")}
@@ -53,7 +54,7 @@ const Featured = () => {
                 display: "-webkit-box",
                 WebkitLineClamp: "2",
                 WebkitBoxOrient: "vertical",
-              }} variant={"h4"}>
+              }} variant={"h2"}>
                 {t("featured.pricePerformance")}
               </Typography>
 

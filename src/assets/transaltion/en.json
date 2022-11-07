@@ -19,6 +19,8 @@
     "getQuote": "Get Quote"
   },
   "services": {
+    "heading": "With us, you get the best insurance coverage with many advantages.",
+    "subHeading": "Everything you need.",
     "parkingDamage": "Parking damage",
     "parkingDamageDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
     "assistance": "Assistance",
@@ -54,30 +56,33 @@
     "done": "Done"
   },
   "fq": {
-    "1panelHeading": "Heading",
-    "1panelParagraph": "lorem",
-    "2panelHeading": "Heading 2",
-    "2panelParagraph": "lorem 2",
-    "3panelHeading": "Heading 3",
-    "3panelParagraph": "lorem 3",
-    "4panelHeading": "Heading 4",
-    "4panelParagraph": "lorem 4",
-    "5panelHeading": "Heading 5",
-    "5panelParagraph": "lorem 5"
+    "1panelHeading": "How do I register a car?",
+    "1panelParagraph": "First, take out motor vehicle insurance. The insurance company then submits the electronic insurance certificate to the responsible Road Traffic Office. After this, you or your garage owner go to the Road Traffic Office with the original of the previous vehicle registration document or in the case of a new car with the inspection report. The latter then issues the license plates and the new vehicle registration document. It is often also possible to send the original vehicle registration document by mail to the Road Traffic Office. In this case, you will also receive the plates and new documents by mail. The best way of finding out whether the responsible Road Traffic Office offers this option is on its website.",
+    "2panelHeading": "Can I insure a motorhome with you?",
+    "2panelParagraph": "Zurich Motor Vehicle Insurance can be taken out for motorhomes. Insurance coverage can be agreed individually. The premium for a motorhome cannot be calculated online. Call us at 0800 80 80 80 or contact your advisor. We would be happy to give you a quotation.",
+    "3panelHeading": "What is the difference between the Parking Damage and Parking Damage PLUS insurance options?",
+    "3panelParagraph": "Both insurances cover damage caused to your parked vehicle by unknown vehicles or persons. In the case of Parking Damage, the maximum amount is limited to CHF 1,000 per claim. There is no limit for Parking Damage PLUS. In both cases, up to two claims will be paid per calendar year.",
+    "4panelHeading": "Am I also covered abroad?",
+    "4panelParagraph": "The insurance applies in Switzerland and the Principality of Liechtenstein, European countries as well as the countries bordering the Mediterranean and the island states of the Mediterranean. However, the insurance does not apply in the following countries: Belarus, Moldavia, Ukraine, the Russian Federation, Georgia, Armenia, Azerbaijan, Kazakhstan, Egypt, Algeria, Lebanon, Libya and Syria.",
+    "5panelHeading": "What does breakdown assistance cost?",
+    "5panelParagraph": "You can choose between many coverage options, based on a personal calculation."
   },
   "pricing": {
     "learnMore": "Learn more"
   },
   "facilities": {
-    "column1": "column",
-    "column2": "column",
-    "column3": "column",
-    "facilityTest1": "lorem",
-    "facilityTest2": "lorem",
-    "facilityTest3": "lorem",
-    "facilityTest4": "lorem",
-    "facilityTest5": "lorem",
-    "facilityTest6": "lorem",
-    "facilityTest7": "lorem"
+    "column1": " ",
+    "column2": "Full coverage",
+    "column3": "Half coverage",
+    "facilityTest1": "Property damage and financial loss",
+    "facilityTest2": "Personal injury",
+    "facilityTest3": "Own damage coverage",
+    "facilityTest4": "Glass damage",
+    "facilityTest5": "Natural damage",
+    "facilityTest6": "Fire and explosion",
+    "facilityTest7": "Vandalism",
+    "facilityTest8": "Animal damage",
+    "facilityTest9": "theft",
+    "facilityTest10": "gross negligence"
   }
 }

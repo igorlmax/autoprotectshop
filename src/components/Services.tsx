@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Stack, useTheme } from "@mui/material";
+import { Container, Grid, Stack, Typography, useTheme } from '@mui/material';
 import ServiceCard from "./ServiceCard";
 import CarCrashRoundedIcon from "@mui/icons-material/CarCrashRounded";
 import { useTranslation } from "react-multi-lang";
@@ -15,15 +15,19 @@ const Services = () => {
   return (
     <>
       <Container maxWidth={"xl"}>
-        <Grid container py={6}>
-          <Grid item lg>
-            <Stack
+        <Grid container py={5}>
+            <Grid item lg>
+            <Typography align='center' variant='h2'>{t("services.heading")}</Typography>
+            <Typography align='center' variant='h2' fontSize='24px' >{t("services.subHeading")}</Typography>
+
+              <Stack
               direction={"row"}
               justifyContent={"center"}
               alignItems={"center"}
               spacing={6}
+              style={{marginTop: 40}}
             >
-              <Stack direction={"column"} spacing={6}>
+              <Stack direction={"column"} spacing={3}>
                 <ServiceCard
                   icon={
                     <CarCrashRoundedIcon
@@ -48,7 +52,7 @@ const Services = () => {
                 />
               </Stack>
 
-              <Stack direction={"column"} spacing={6}>
+              <Stack direction={"column"} spacing={3}>
                 <ServiceCard
                   icon={
                     <SavingsIcon
@@ -73,7 +77,7 @@ const Services = () => {
                 />
               </Stack>
 
-              <Stack direction={"column"} spacing={6}>
+              <Stack direction={"column"} spacing={3}>
                 <ServiceCard
                   icon={
                     <MinorCrashIcon
