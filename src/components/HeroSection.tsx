@@ -1,16 +1,18 @@
 import React from "react";
 import {
+  Box,
   Button,
   Container,
   Grid,
   Stack,
   Typography,
   useTheme,
-} from "@mui/material";
+} from '@mui/material';
 import { useTranslation } from "react-multi-lang";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import carLoan from "../assets/images/img_3.png";
+import carLoan from "../assets/images/seller.png";
 import { Link } from "react-router-dom";
+import {ReactComponent as Logo} from '../assets/images/pocket.svg';
 
 const HeroSection = () => {
   const t = useTranslation();
@@ -53,20 +55,26 @@ const HeroSection = () => {
               <Link to={"/quote"} style={{ textDecoration: "none" }}>
                 <Button
                   variant={"contained"}
-                  style={{ borderRadius: 50 }}
+                  style={{ borderRadius: 50, padding: '12px 30px', marginTop: 14 }}
                   size={"large"}
                 >
-                  {t("navigation.getQuote")}
+                  {t("hero.getQuote")}
                 </Button>
               </Link>
             </Stack>
           </Grid>
-          <Grid item lg={6}>
-            <Stack direction="column" spacing={2} alignItems="center">
-              <Stack>
-                <img src={carLoan} />
-              </Stack>
-            </Stack>
+          <Grid item lg={6} justifyContent='center'>
+            <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+            >
+                <img src={carLoan}/>
+            </Box>
           </Grid>
         </Stack>
       </Container>

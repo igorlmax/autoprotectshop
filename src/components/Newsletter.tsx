@@ -47,8 +47,12 @@ const Newsletter = () => {
                   {t("newsletter.unsubscribe")}
                 </Typography>
 
-                <TextField name="url" variant="outlined" />
-              </Stack>
+                <TextField
+                    className="inputRounded"
+                    placeholder={t("newsletter.email")}
+                    variant="outlined"
+                    size="small"
+                />              </Stack>
             </Grid>
             <Grid item lg={4}>
               <Box

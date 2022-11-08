@@ -43,7 +43,8 @@
     "heading": "Change alert: We like to remind you",
     "title": "You can't change your car insurance at the moment? Sign up for newsletter and receive information on new products, limited campaigns, personal offers and useful tips on everything to do with insurance.",
     "register": "Register",
-    "unsubscribe": "You can unsubscribe at any time using the unsubscribe link in our emails or via our contact form sign out. You can find more ways to unsubscribe here ."
+    "unsubscribe": "You can unsubscribe at any time using the unsubscribe link in our emails or via our contact form sign out. You can find more ways to unsubscribe here .",
+    "email": "Your E-mail"
   },
   "quote": {
     "vehicleInfo": "Vehicle Info",

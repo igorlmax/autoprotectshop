@@ -6,7 +6,7 @@
     "pointOne": "Die faire und flexible Autoversicherung",
     "pointTwo": "In 3 Minuten Tarif berechnen",
     "pointThree": "100% Online - Digital und schnell zu deinem Beitrag",
-    "getQuote": "Get Quote"
+    "getQuote": "Jetzt berechnen"
   },
   "services": {
     "parkingDamage": "Parkschaden",
@@ -87,6 +87,7 @@
     "heading": "Wechsel-Alarm: Wir erinnern dich gerne",
     "title": "Du kannst aktuell nicht deine Autoversicherung wechseln? Melde dich gerne für den FRIDAY-Newsletter an und erhalte Informationen zu Produktneuheiten, limitierten Aktionen, persönliche Angebote und nützliche Tipps rund ums Thema Versicherungen.",
     "register": "Anmelden",
-    "unsubscribe": "Du kannst dich jederzeit mit dem Abmeldelink in unseren E-Mails oder über unser Kontaktformular abmelden. Weitere Abmeldemöglichkeiten findest Du hier."
+    "unsubscribe": "Du kannst dich jederzeit mit dem Abmeldelink in unseren E-Mails oder über unser Kontaktformular abmelden. Weitere Abmeldemöglichkeiten findest Du hier.",
+    "email": "Deine E-mail"
   }
 }

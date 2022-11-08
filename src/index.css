@@ -14,3 +14,11 @@ input[type="text"]
 {
   border: white !important;
 }
+
+button {
+  box-shadow: none !important;
+}
+
+.inputRounded .MuiOutlinedInput-root {
+  border-radius: 20px;
+}
