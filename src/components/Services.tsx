@@ -17,7 +17,7 @@ const Services = () => {
       <Container maxWidth={"xl"}>
         <Grid container py={5}>
             <Grid item lg>
-            <Typography align='center' variant='h2'>{t("services.heading")}</Typography>
+            <Typography fontSize='32px' align='center' variant='h2'>{t("services.heading")}</Typography>
             <Typography align='center' variant='h2' fontSize='24px' >{t("services.subHeading")}</Typography>
 
               <Stack

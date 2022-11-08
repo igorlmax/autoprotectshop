@@ -18,7 +18,7 @@ const Newsletter = () => {
   return (
     <>
       <Grid container style={{ backgroundColor: theme.palette.primary.main }}>
-        <Container maxWidth={"xl"}>
+        <Container maxWidth={"lg"}>
           <Stack direction={"row"}>
             <Grid item lg={8}>
               <Stack

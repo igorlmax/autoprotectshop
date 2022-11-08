@@ -1,6 +1,13 @@
 {
   "appName": "Versicherung",
-
+  "hero": {
+    "payPerKm": "Dein Start in eine bessere Autoversicherung",
+    "payFullPrice": "Wir versichern, was dir lieb ist",
+    "pointOne": "Die faire und flexible Autoversicherung",
+    "pointTwo": "In 3 Minuten Tarif berechnen",
+    "pointThree": "100% Online - Digital und schnell zu deinem Beitrag",
+    "getQuote": "Get Quote"
+  },
   "services": {
     "parkingDamage": "Parkschaden",
     "assistance": "Assistance",
@@ -37,9 +44,31 @@
     "5panelParagraph": "Sie können zwischen wenigen Deckungen wählen, basierend auf Ihrer persönlichen Kalkulation."
   },
   "pricing": {
-    "learnMore": "Mehr erfahren"
+    "heading": "Deckungen und Zusatzleistungen",
+    "subHeading": "Wähle die passende Deckung für dich. Ob Kfz-Haftpflicht, Teilkasko oder Vollkasko.",
+    "subHeading2": "Und benötigst du noch weiteren, auf dich angepassten Schutz, schau dir die FRIDAY Zusatzleistungen an.",
+    "learnMore": "Mehr erfahren",
+    "headingCard1": "Covers",
+    "headingCard2": "Additional services",
+    "headingCard3": "Authorize car online",
+    "subHeadingCard1": "Motor vehicle liability, partially comprehensive or fully comprehensive?",
+    "subHeadingCard2": "Choose what is important to you.",
+    "subHeadingCard3": "Use the service from our partner Kroschke",
+    "descriptionCard1": "Decide on the right cover for your car.",
+    "descriptionCard2": "Choose suitable additional services and expand your individual protection.",
+    "descriptionCard3": "Get your desired number plate sent to your home - very easily and without going to the authorities.",
+    "card1Feature1": "Liability: A must for drivers",
+    "card1Feature2": "Partial coverage: More protection",
+    "card1Feature3": "Fully comprehensive: well insured all round",
+    "card2Feature1": "Free choice of workshop, discount protection, driver protection, protection letter, travel package",
+    "card2Feature2": "With ECO you compensate for kilometers driven",
+    "card3Feature1": "Safe during Corona Pandemic ",
+    "card3Feature2": "Save yourself waiting times at authorities",
+    "card3Feature3": "Registration service for 99.00 euros"
   },
   "facilities": {
+    "heading": "Auf einen Blick",
+    "subHeading": "Diese Leistungen sind dabei:",
     "column1": " ",
     "column2": "Vollkasko",
     "column3": "Teilkasko",
@@ -53,5 +82,11 @@
     "facilityTest8": "Tierschäden",
     "facilityTest9": "Grobe Fahrlässigkeit",
     "facilityTest10": "Selbstverschuldete Unfälle"
+  },
+  "newsletter": {
+    "heading": "Wechsel-Alarm: Wir erinnern dich gerne",
+    "title": "Du kannst aktuell nicht deine Autoversicherung wechseln? Melde dich gerne für den FRIDAY-Newsletter an und erhalte Informationen zu Produktneuheiten, limitierten Aktionen, persönliche Angebote und nützliche Tipps rund ums Thema Versicherungen.",
+    "register": "Anmelden",
+    "unsubscribe": "Du kannst dich jederzeit mit dem Abmeldelink in unseren E-Mails oder über unser Kontaktformular abmelden. Weitere Abmeldemöglichkeiten findest Du hier."
   }
 }

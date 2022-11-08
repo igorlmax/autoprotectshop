@@ -83,6 +83,7 @@ const Navigation = () => {
               </Button>
 
               <Button
+                id="basic-button"
                 aria-controls={open ? "basic-menu" : undefined}
                 aria-haspopup="true"
                 aria-expanded={open ? "true" : undefined}
@@ -91,6 +92,7 @@ const Navigation = () => {
                 <LanguageIcon />
               </Button>
               <Menu
+                id="basic-menu"
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}
@@ -100,11 +102,21 @@ const Navigation = () => {
               >
                 <MenuItem
                   sx={{ width: 120 }}
-                  onClick={() => setLanguage('de')}
+                  onClick={() => {
+                    setLanguage("de");
+                    handleClose();
+                  }}
                 >
                   DE
                 </MenuItem>
-                <MenuItem onClick={() => setLanguage('en')}>EN</MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    setLanguage("en");
+                    handleClose();
+                  }}
+                >
+                  EN
+                </MenuItem>
               </Menu>
             </Stack>
           </Toolbar>

@@ -40,10 +40,10 @@
     "calculateCarInsurance": "Calculate car insurance now"
   },
   "newsletter": {
-    "heading": "Wechsel-Alarm: Wir erinnern dich gerne",
-    "title": "Du kannst aktuell nicht deine Autoversicherung wechseln? Melde dich gerne für den FRIDAY-Newsletter an und erhalte Informationen zu Produktneuheiten, limitierten Aktionen, persönliche Angebote und nützliche Tipps rund ums Thema Versicherungen.",
-    "register": "Anmelden",
-    "unsubscribe": "Du kannst dich jederzeit mit dem Abmeldelink in unseren E-Mails oder über unser Kontaktformular abmelden. Weitere Abmeldemöglichkeiten findest Du hier."
+    "heading": "Change alert: We like to remind you",
+    "title": "You can't change your car insurance at the moment? Sign up for newsletter and receive information on new products, limited campaigns, personal offers and useful tips on everything to do with insurance.",
+    "register": "Register",
+    "unsubscribe": "You can unsubscribe at any time using the unsubscribe link in our emails or via our contact form sign out. You can find more ways to unsubscribe here ."
   },
   "quote": {
     "vehicleInfo": "Vehicle Info",
@@ -68,9 +68,32 @@
     "5panelParagraph": "You can choose between many coverage options, based on a personal calculation."
   },
   "pricing": {
-    "learnMore": "Learn more"
+    "heading": "Coverage and Additional Services",
+    "subHeading": "Choose the right cover for you. Whether motor vehicle liability, partial or fully comprehensive.",
+    "subHeading2": "And if you need additional protection tailored to you, take a look at the FRIDAY additional services.",
+
+    "learnMore": "Learn more",
+    "headingCard1": "Covers",
+    "headingCard2": "Additional services",
+    "headingCard3": "Authorize car online",
+    "subHeadingCard1": "Motor vehicle liability, partially comprehensive or fully comprehensive?",
+    "subHeadingCard2": "Choose what is important to you.",
+    "subHeadingCard3": "Use the service from our partner Kroschke",
+    "descriptionCard1": "Decide on the right cover for your car.",
+    "descriptionCard2": "Choose suitable additional services and expand your individual protection.",
+    "descriptionCard3": "Get your desired number plate sent to your home - very easily and without going to the authorities.",
+    "card1Feature1": "Liability: A must for drivers",
+    "card1Feature2": "Partial coverage: More protection",
+    "card1Feature3": "Fully comprehensive: well insured all round",
+    "card2Feature1": "Free choice of workshop, discount protection, driver protection, protection letter, travel package",
+    "card2Feature2": "With ECO you compensate for kilometers driven",
+    "card3Feature1": "Safe during Corona Pandemic ",
+    "card3Feature2": "Save yourself waiting times at authorities",
+    "card3Feature3": "Registration service for 99.00 euros"
   },
   "facilities": {
+    "heading": "At a glance",
+    "subHeading": "These services are included:",
     "column1": " ",
     "column2": "Full coverage",
     "column3": "Half coverage",

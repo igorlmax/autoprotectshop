@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { useTranslation } from "react-multi-lang";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import carLoan from "../assets/images/icons8-car-roof-box-100.png";
+import carLoan from "../assets/images/img_3.png";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
@@ -28,7 +28,7 @@ const HeroSection = () => {
               justifyContent="center"
               alignItems="flex-start"
             >
-              <Typography color={"primary"} variant={"h4"}>
+              <Typography color={"primary"} variant={"h2"}>
                 {t("hero.payPerKm")}
               </Typography>
               <Typography

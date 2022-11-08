@@ -73,10 +73,12 @@ const SpecTable = () => {
   return (
     <Grid
       container
-      p={10}
+      p={7}
     >
       <Container maxWidth={"md"}>
-        <TableContainer component={Paper}>
+        <Typography variant='h2' align='center'>{t("facilities.heading")}</Typography>
+        <Typography variant='h4' align='center'>{t("facilities.subHeading")}</Typography>
+        <TableContainer component={Paper} style={{margin: '24px 0'}}>
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
               <TableRow>
