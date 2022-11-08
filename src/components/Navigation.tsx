@@ -12,10 +12,11 @@ import {
   useTheme,
 } from "@mui/material";
 import {
-  setDefaultLanguage, setLanguage,
+  setDefaultLanguage,
+  setLanguage,
   setTranslations,
   useTranslation,
-} from 'react-multi-lang';
+} from "react-multi-lang";
 import de from "../assets/transaltion/de.json";
 import en from "../assets/transaltion/en.json";
 import LanguageIcon from "@mui/icons-material/Language";
@@ -23,7 +24,7 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import ElectricCarIcon from "@mui/icons-material/ElectricCar";
 import SwapVerticalCircleIcon from "@mui/icons-material/SwapVerticalCircle";
 import { Link } from "react-router-dom";
-import lock from '../assets/images/lock4.png'
+import lock from "../assets/images/lock4.png";
 
 setTranslations({ de, en });
 setDefaultLanguage("en");
@@ -43,19 +44,16 @@ const Navigation = () => {
 
   return (
     <>
-      <AppBar position={"relative"} color="transparent">
+      <AppBar position="sticky" color="default">
         <Container maxWidth={"xl"}>
           <Toolbar>
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <IconButton size={"large"} edge="start" aria-label="menu">
-                <img src={lock} style={{maxWidth: 48}}/>
+                <img src={lock} style={{ maxWidth: 48 }} />
                 {/*<ElectricCarIcon color={"primary"} />*/}
               </IconButton>
             </Link>
-            <Typography
-              variant="h6"
-              sx={{ flexGrow: 1 }}
-            >
+            <Typography variant="h6" sx={{ flexGrow: 1 }}>
               <Link to={"/"} style={{ textDecoration: "none" }}>
                 {t("appName")}
               </Link>
@@ -71,14 +69,42 @@ const Navigation = () => {
                 </Link>
               </Button>
               <Link to={"/login"} style={{ textDecoration: "none" }}>
-              <Button color="inherit">{t("navigation.reportDamage")}</Button>
+                <Button color="inherit">{t("navigation.reportDamage")}</Button>
               </Link>
-              <Button color="inherit">{t("navigation.Pricing")}</Button>
-              <Button color="inherit" onClick={() =>
+              <Button
+                color="inherit"
+                onClick={() =>
                   // @ts-ignore
-                  document.getElementById('middle').scrollIntoView()
-              }>{t("navigation.services")}</Button>
-              <Button color="inherit">{t("navigation.contact")}</Button>
+                  document.getElementById("services").scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
+              >
+                {t("navigation.services")}
+              </Button>
+              <Button
+                color="inherit"
+                onClick={() =>
+                  // @ts-ignore
+                  document.getElementById("pricing").scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
+              >
+                {t("navigation.Pricing")}
+              </Button>
+
+              <Button
+                color="inherit"
+                onClick={() =>
+                  // @ts-ignore
+                  document.getElementById("footer").scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
+              >
+                {t("navigation.contact")}
+              </Button>
               <Button
                 variant={"contained"}
                 startIcon={<LocalPhoneIcon />}

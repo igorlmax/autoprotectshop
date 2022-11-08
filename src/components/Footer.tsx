@@ -33,6 +33,7 @@ const Footer = () => {
       container
       style={{ backgroundColor: theme.palette.primary.dark }}
       py={7}
+      id='footer'
     >
       <Container maxWidth={"lg"}>
         <Stack direction="row">

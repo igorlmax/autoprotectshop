@@ -14,6 +14,7 @@ const Pricing = () => {
     <>
       <Grid
         container
+        id='pricing'
         direction={"row"}
         justifyContent={"center"}
         alignItems={"center"}
