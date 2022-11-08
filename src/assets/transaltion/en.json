@@ -1,12 +1,12 @@
 {
-  "appName": "Insurance",
+  "appName": "Secura",
   "navigation": {
     "getQuote": "Get Quote",
-    "Help": "Help",
+    "Pricing": "Pricing",
     "Hotline": "Hotline",
     "reportDamage": "Report damage",
     "login": "Login",
-    "aboutUs": "About us",
+    "services": "Services",
     "languages": "Languages",
     "contact": "Contact us"
   },

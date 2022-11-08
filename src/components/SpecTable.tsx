@@ -74,6 +74,7 @@ const SpecTable = () => {
     <Grid
       container
       p={7}
+      id='services'
     >
       <Container maxWidth={"md"}>
         <Typography variant='h2' align='center'>{t("facilities.heading")}</Typography>

@@ -23,9 +23,10 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import ElectricCarIcon from "@mui/icons-material/ElectricCar";
 import SwapVerticalCircleIcon from "@mui/icons-material/SwapVerticalCircle";
 import { Link } from "react-router-dom";
+import lock from '../assets/images/lock4.png'
 
 setTranslations({ de, en });
-setDefaultLanguage("de");
+setDefaultLanguage("en");
 
 const Navigation = () => {
   const theme = useTheme();
@@ -47,13 +48,12 @@ const Navigation = () => {
           <Toolbar>
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <IconButton size={"large"} edge="start" aria-label="menu">
-                <ElectricCarIcon color={"primary"} />
+                <img src={lock} style={{maxWidth: 48}}/>
+                {/*<ElectricCarIcon color={"primary"} />*/}
               </IconButton>
             </Link>
             <Typography
               variant="h6"
-              color="inherit"
-              component="div"
               sx={{ flexGrow: 1 }}
             >
               <Link to={"/"} style={{ textDecoration: "none" }}>
@@ -70,10 +70,15 @@ const Navigation = () => {
                   {t("navigation.getQuote")}
                 </Link>
               </Button>
+              <Link to={"/login"} style={{ textDecoration: "none" }}>
               <Button color="inherit">{t("navigation.reportDamage")}</Button>
-              <Button color="inherit">{t("navigation.Help")}</Button>
+              </Link>
+              <Button color="inherit">{t("navigation.Pricing")}</Button>
+              <Button color="inherit" onClick={() =>
+                  // @ts-ignore
+                  document.getElementById('middle').scrollIntoView()
+              }>{t("navigation.services")}</Button>
               <Button color="inherit">{t("navigation.contact")}</Button>
-              <Button color="inherit">{t("navigation.aboutUs")}</Button>
               <Button
                 variant={"contained"}
                 startIcon={<LocalPhoneIcon />}
