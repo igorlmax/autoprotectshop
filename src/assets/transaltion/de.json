@@ -1,5 +1,15 @@
 {
   "appName": "Secura.",
+  "navigation": {
+    "getQuote": "Tarif berechnen",
+    "Pricing": "Prämien",
+    "Hotline": "Hotline",
+    "reportDamage": "Schaden melden",
+    "login": "Login",
+    "services": "Dienste",
+    "languages": "Sprachen",
+    "contact": "Kontakt"
+  },
   "hero": {
     "payPerKm": "Dein Start in eine bessere Autoversicherung",
     "payFullPrice": "Wir versichern, was dir lieb ist",
