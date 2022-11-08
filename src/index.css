@@ -22,3 +22,11 @@ button {
 .inputRounded .MuiOutlinedInput-root {
   border-radius: 20px;
 }
+
+a{
+  text-decoration: none;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}

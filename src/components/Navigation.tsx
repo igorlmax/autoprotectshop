@@ -110,7 +110,8 @@ const Navigation = () => {
                 startIcon={<LocalPhoneIcon />}
                 style={{ borderRadius: 50 }}
               >
-                {t("navigation.Hotline")}
+                <a href="tel:8665562570">                {t("navigation.Hotline")}
+                </a>
               </Button>
 
               <Button
