@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import * as Yup from "yup";
 import {
   CheckBoxField,
@@ -11,13 +11,25 @@ import {
 } from "formik-stepper";
 import "formik-stepper/dist/style.css";
 import { useFormik } from "formik";
-import { Container, Grid, Stack, useTheme } from "@mui/material";
+import {
+    Box,
+    Button,
+    Container,
+    Grid, LinearProgress,
+    Stack,
+    Typography,
+    useTheme,
+} from '@mui/material';
 import { carList } from "../assets/data/car-list";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaGasPump } from "react-icons/fa";
 import { BsPencilFill } from "react-icons/bs";
 import { useTranslation } from "react-multi-lang";
 import { AiOutlineFileDone } from "react-icons/ai";
 import styled from "@emotion/styled";
+import { MdElectricCar } from "react-icons/md";
+import { CgAsterisk } from "react-icons/cg";
+import { TbManualGearbox } from 'react-icons/tb';
+import { VscGear } from 'react-icons/vsc';
 
 export const CustomInput = styled.input`
   width: 300px;
@@ -30,9 +42,7 @@ const validationSchema = Yup.object().shape({
   brand: Yup.string().required("The Brand field is required"),
   model: Yup.string().required("The Model field is required"),
 
-  registrationMonth: Yup.string().required(
-    "The registration month field is required"
-  ),
+
   registrationYear: Yup.string().required(
     "The registration year field is required"
   ),
@@ -45,7 +55,6 @@ const validationSchema = Yup.object().shape({
 
   horsepower: Yup.string().required("The transmission type field is required"),
 
-  accident: Yup.string().required("The accident field is required"),
 
   kmPerYear: Yup.string().required("The km per year field is required"),
 
@@ -58,12 +67,10 @@ const validationSchema = Yup.object().shape({
 const initialValues = {
   brand: "",
   model: "",
-  registrationMonth: "",
   registrationYear: "",
   fuel: "",
   transmission: "",
   horsepower: "",
-  accident: "",
   kmPerYear: "",
   firstName: "",
   lastName: "",
@@ -74,6 +81,15 @@ const initialValues = {
 const Quote = () => {
   const t = useTranslation();
   const theme = useTheme();
+
+  const [isActive, setIsActive] = useState(false);
+    const [activeIndex, setActiveIndex] = useState<number | undefined>(undefined);
+
+
+    const handleClick = () => {
+    setIsActive((current) => !current);
+  };
+
   const formik = useFormik({
     initialValues: initialValues,
     validationSchema: validationSchema,
@@ -92,18 +108,19 @@ const Quote = () => {
   return (
     <>
       <Grid container style={{ backgroundColor: theme.palette.primary.light }}>
-        <Container maxWidth={"md"}>
+        <Container
+          maxWidth={"md"}
+          style={{ height: "820px", marginBottom: 12 }}
+        >
           <FormikStepper
             onSubmit={onSubmit}
             initialValues={{
               brand: "",
               model: "",
-              registrationMonth: "",
               registrationYear: "",
               fuel: "",
               transmission: "",
               horsepower: "",
-              accident: "",
               kmPerYear: "",
               firstName: "",
               lastName: "",
@@ -143,74 +160,187 @@ const Quote = () => {
                 else return <FaCheck />;
               }}
             >
-              <SelectField
+                <Typography align='center' variant='h2'>{t("quote.1stepper")}</Typography>
+
+                <SelectField
                 name="brand"
-                label="Car Brand"
+                label={t("quote.carBrand")}
                 options={carList.map((car) => {
                   return { value: car.brand, label: car.brand };
                 })}
               />
               <SelectField
                 name="model"
-                label="Car Brand"
+                label={t("quote.model")}
                 options={carList.map((car) => {
                   return { value: car.brand, label: car.brand };
                 })}
               />
 
               <Stack direction={"row"} justifyContent={"stretch"}>
+
                 <InputField
                   label="Year of registration"
-                  name="registrationMonth"
-                  type="text"
-                  placeholder="MM.YYYY"
-                />
-                <InputField
-                  label="Month of registration"
                   name="registrationYear"
                   type="text"
                   placeholder="MM.YYYY"
                 />
               </Stack>
             </FormikStep>
+
             <FormikStep
               circleColor="#7e57c2"
-              label={t("quote.engineSpec")}
+              label={t("quote.fuel")}
               Icon={({ active, done }) => {
                 console.log({ active, done });
                 if (active) return <BsPencilFill />;
                 else return <FaCheck />;
               }}
             >
-              <RadioField
-                name="fuel"
-                label="Fuel type"
-                options={[
-                  { label: "electricity", value: "electricity" },
-                  { label: "diesel.", value: "diesel" },
-                  { label: "petrol", value: "petrol" },
-                  { label: "different", value: "different" },
-                ]}
-              />
+                <Typography align='center' variant='h2'>{t("quote.2stepper")}</Typography>
+              <Box
+                display="flex"
+                justifyContent="center"
+                gap={2}
+                alignItems={"center"}
+                justifyItems={"center"}
+                my={8}
+              >
+                <Button onClick={() => setActiveIndex(0)}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      width: 140,
+                      height: 140,
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "rgba(0, 0, 0, 0)",
+                        border: activeIndex === 0
+                            ? "2px solid #7e57c2"
+                            : "2px solid #c4b2e3",
+                      "&:hover": {
+                        border: "2px solid #7e57c2",
+                      },
+                    }}
+                  >
+                    <FaGasPump fontSize={32} />
+                    <Typography>{t("quote.benzin")}</Typography>
+                  </Box>
+                </Button>
 
-              <RadioField
-                name="transmission"
-                label="Transmission"
-                options={[
-                  { label: "manual", value: "manual" },
-                  { label: "automatic", value: "automatic" },
-                ]}
-              />
+                <Button onClick={() => setActiveIndex(1)}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      width: 140,
+                      height: 140,
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "rgba(0, 0, 0, 0)",
+                      border: activeIndex === 1
+                        ? "2px solid #7e57c2"
+                        : "2px solid #c4b2e3",
+                      "&:hover": {
+                        border: "2px solid #7e57c2",
+                      },
+                    }}
+                  >
+                    <MdElectricCar fontSize={32} />
+                    <Typography>{t("quote.strom")}</Typography>
+                  </Box>
+                </Button>
 
-              <SelectField
-                name="horsepower"
-                label="Horsepower"
-                options={[
-                  { label: "manual", value: "manual" },
-                  { label: "automatic", value: "automatic" },
-                ]}
-              />
+                  <Button onClick={() => setActiveIndex(2)}>
+                      <Box
+                          sx={{
+                              display: "flex",
+                              flexDirection: "column",
+                              width: 140,
+                              height: 140,
+                              justifyContent: "center",
+                              alignItems: "center",
+                              backgroundColor: "rgba(0, 0, 0, 0)",
+                              border: activeIndex === 2
+                                  ? "2px solid #7e57c2"
+                                  : "2px solid #c4b2e3",
+                              "&:hover": {
+                                  border: "2px solid #7e57c2",
+                              },
+                          }}
+                      >
+                          <Typography>{t("quote.other")}</Typography>
+                      </Box>
+                  </Button>
+              </Box>
             </FormikStep>
+
+              <FormikStep
+                  circleColor="#7e57c2"
+                  label={t("quote.engineSpec")}
+                  Icon={({ active, done }) => {
+                      console.log({ active, done });
+                      if (active) return <BsPencilFill />;
+                      else return <FaCheck />;
+                  }}
+              >
+                  <Typography align='center' variant='h2'>{t("quote.3stepper")}</Typography>
+                  <Box
+                      display="flex"
+                      justifyContent="center"
+                      gap={2}
+                      alignItems={"center"}
+                      justifyItems={"center"}
+                      my={8}
+                  >
+                      <Button onClick={() => setActiveIndex(0)}>
+                          <Box
+                              sx={{
+                                  display: "flex",
+                                  flexDirection: "column",
+                                  width: 140,
+                                  height: 140,
+                                  justifyContent: "center",
+                                  alignItems: "center",
+                                  backgroundColor: "rgba(0, 0, 0, 0)",
+                                  border: activeIndex === 0
+                                      ? "2px solid #7e57c2"
+                                      : "2px solid #c4b2e3",
+                                  "&:hover": {
+                                      border: "2px solid #7e57c2",
+                                  },
+                              }}
+                          >
+                              <VscGear fontSize={32} />
+                              <Typography>{t("quote.automatic")}</Typography>
+                          </Box>
+                      </Button>
+
+                      <Button onClick={() => setActiveIndex(1)}>
+                          <Box
+                              sx={{
+                                  display: "flex",
+                                  flexDirection: "column",
+                                  width: 140,
+                                  height: 140,
+                                  justifyContent: "center",
+                                  alignItems: "center",
+                                  backgroundColor: "rgba(0, 0, 0, 0)",
+                                  border: activeIndex === 1
+                                      ? "2px solid #7e57c2"
+                                      : "2px solid #c4b2e3",
+                                  "&:hover": {
+                                      border: "2px solid #7e57c2",
+                                  },
+                              }}
+                          >
+                              <TbManualGearbox fontSize={32} />
+                              <Typography>{t("quote.manual")}</Typography>
+                          </Box>
+                      </Button>
+                  </Box>
+              </FormikStep>
 
             <FormikStep
               circleColor="#7e57c2"
@@ -221,8 +351,9 @@ const Quote = () => {
                 else return <FaCheck />;
               }}
             >
-              <CheckBoxField name="accident" label="Accident" />
-              <InputField
+                <Typography align='center' variant='h2'>{t("quote.4stepper")}</Typography>
+
+                <InputField
                 name="kmPerYear"
                 label="Km per year"
                 floating
@@ -241,23 +372,24 @@ const Quote = () => {
             >
               <InputField
                 name="firstName"
-                label="Firstname"
+                label={t("quote.firstName")}
                 floating
                 type="text"
               />
               <InputField
                 name="lastName"
-                label="Lastname"
+                label={t("quote.lastName")}
                 floating
                 type="text"
               />
               <InputField
                 name="birthDate"
-                label="Date of birth"
+                label={t("quote.birthYear")}
                 floating
                 type="text"
               />
-              <InputField name="zip" label="Zip code" floating type="text" />
+              <InputField name="zip"                 label={t("quote.zipCode")}
+                          floating type="text" />
             </FormikStep>
 
             <FormikStep
@@ -269,7 +401,10 @@ const Quote = () => {
                 else return <FaCheck />;
               }}
             >
-              <h2>Your all done!</h2>
+                <Box style={{margin: '20p0x 200px'}}>
+              <Typography my={3} align='center' variant='h2'>{t("quote.doneMessage")}</Typography>
+                <LinearProgress />
+                </Box>
             </FormikStep>
           </FormikStepper>
         </Container>

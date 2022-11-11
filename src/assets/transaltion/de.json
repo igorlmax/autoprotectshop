@@ -18,6 +18,37 @@
     "pointThree": "100% Online - Digital und schnell zu deinem Beitrag",
     "getQuote": "Jetzt berechnen"
   },
+  "quote": {
+    "vehicleInfo": "Fahrzeug",
+    "fuel": "Treibstoff ",
+    "engineSpec": "Motordaten",
+    "insuranceCover": "KM/Jahr",
+    "personalInfo": "Persönliche Angaben",
+    "confirmation": "Bestätigung",
+    "next": "Next",
+    "back": "Back",
+    "done": "Done",
+    "1stepper": "In 90 Sekunden Dein persönliches Angebot berechnen.",
+    "2stepper": "Welchen Treibstoff nutzt Ihr Fahrzeug?",
+    "3stepper": "Wie ist die Schaltung Ihres Fahrzeugs?",
+    "4stepper": "Wie viele Kilometer fährt das Fahrzeug pro Jahr?",
+
+    "carBrand": "Auto Marke",
+    "model": "Modell",
+    "yearOfRegistration": "Erstzulassung",
+
+    "firstName": "Vorname",
+    "lastName": "Familienname",
+    "birthYear": "Geburtsdatum",
+    "zipCode": "Postleitzahl",
+
+    "benzin": "Benzin/Diesel",
+    "strom": "Strom",
+    "automatic": "Handschalter",
+    "manual": "Automatic",
+    "other": "Andere",
+    "doneMessage": "Wir stellen für Sie Ihr persönliches Produkt zusammen…"
+  },
   "services": {
     "parkingDamage": "Parkschaden",
     "assistance": "Assistance",
@@ -99,5 +130,10 @@
     "register": "Anmelden",
     "unsubscribe": "Du kannst dich jederzeit mit dem Abmeldelink in unseren E-Mails oder über unser Kontaktformular abmelden. Weitere Abmeldemöglichkeiten findest Du hier.",
     "email": "Deine E-mail"
+  },
+  "login": {
+    "login": "Einloggen",
+    "username": "Benutzername",
+    "password": "Kennwor"
   }
 }

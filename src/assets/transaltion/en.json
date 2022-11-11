@@ -48,13 +48,34 @@
   },
   "quote": {
     "vehicleInfo": "Vehicle Info",
+    "fuel": "Fuel ",
     "engineSpec": "Engine spec",
     "insuranceCover": "Insurance cover",
     "personalInfo": "Personal info",
     "confirmation": "Confirmation",
     "next": "Next",
     "back": "Back",
-    "done": "Done"
+    "done": "Done",
+    "carBrand": "Car Brand",
+    "yearOfRegistration": "Year of registration",
+
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "birthYear": "Date of birth",
+    "zipCode": "Zip code",
+
+    "model": "Model",
+    "1stepper": "Calculate your personal offer in 90 seconds.\n",
+    "2stepper": "What fuel does your vehicle use?",
+    "3stepper": "How is your vehicle shifting?",
+    "4stepper": "How many kilometers do you drive on average per year?",
+    "benzin": "Petrol/Diesel",
+    "strom": "Electricity",
+    "automatic": "Automatic",
+    "manual": "Manual",
+    "other": "Other",
+    "doneMessage": "We calculate your price based on your personal preferences..."
+
   },
   "fq": {
     "1panelHeading": "How do I register a car?",
@@ -108,5 +129,10 @@
     "facilityTest8": "Animal damage",
     "facilityTest9": "theft",
     "facilityTest10": "gross negligence"
+  },
+  "login": {
+    "login": "Login",
+    "username": "Username",
+    "password": "Password"
   }
 }

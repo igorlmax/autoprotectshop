@@ -30,3 +30,14 @@ a{
 a, a:visited, a:hover, a:active {
   color: inherit;
 }
+
+[type=radio]:checked::before,
+[type=checkbox]:checked::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #ffa500;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
