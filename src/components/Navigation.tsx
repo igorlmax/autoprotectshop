@@ -23,8 +23,10 @@ import LanguageIcon from "@mui/icons-material/Language";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import ElectricCarIcon from "@mui/icons-material/ElectricCar";
 import SwapVerticalCircleIcon from "@mui/icons-material/SwapVerticalCircle";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from 'react-router-dom';
 import lock from "../assets/images/lock4.png";
+import { useSearchParams } from "react-router-dom";
+
 
 setTranslations({ de, en });
 setDefaultLanguage("en");
@@ -32,6 +34,9 @@ setDefaultLanguage("en");
 const Navigation = () => {
   const theme = useTheme();
   const t = useTranslation();
+
+  const { pathname } = useLocation();
+  console.log("pathname: ", pathname);
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -68,50 +73,58 @@ const Navigation = () => {
                   {t("navigation.getQuote")}
                 </Link>
               </Button>
+
+              <Link to="#services">
+                <Button
+                  color="inherit"
+                  onClick={() =>
+                    // @ts-ignore
+                    document.getElementById("services").scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                >
+                  {t("navigation.services")}
+                </Button>
+              </Link>
+
+              <Link to="#pricing">
+                <Button
+                  color="inherit"
+                  onClick={() =>
+                    // @ts-ignore
+                    document.getElementById("pricing").scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                >
+                  {t("navigation.Pricing")}
+                </Button>
+              </Link>
+
+              <Link to="#footer">
+                <Button
+                  color="inherit"
+                  onClick={() =>
+                    // @ts-ignore
+                    document.getElementById("footer").scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                >
+                  {t("navigation.contact")}
+                </Button>
+              </Link>
+
               <Link to={"/login"} style={{ textDecoration: "none" }}>
                 <Button color="inherit">{t("navigation.reportDamage")}</Button>
               </Link>
-              <Button
-                color="inherit"
-                onClick={() =>
-                  // @ts-ignore
-                  document.getElementById("services").scrollIntoView({
-                    behavior: "smooth",
-                  })
-                }
-              >
-                {t("navigation.services")}
-              </Button>
-              <Button
-                color="inherit"
-                onClick={() =>
-                  // @ts-ignore
-                  document.getElementById("pricing").scrollIntoView({
-                    behavior: "smooth",
-                  })
-                }
-              >
-                {t("navigation.Pricing")}
-              </Button>
-
-              <Button
-                color="inherit"
-                onClick={() =>
-                  // @ts-ignore
-                  document.getElementById("footer").scrollIntoView({
-                    behavior: "smooth",
-                  })
-                }
-              >
-                {t("navigation.contact")}
-              </Button>
               <Button
                 variant={"contained"}
                 startIcon={<LocalPhoneIcon />}
                 style={{ borderRadius: 50 }}
               >
-                <a href="tel:8665562570">                {t("navigation.Hotline")}
-                </a>
+                <a href="tel:8665562570"> {t("navigation.Hotline")}</a>
               </Button>
 
               <Button

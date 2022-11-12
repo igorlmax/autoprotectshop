@@ -22,17 +22,17 @@
     "heading": "With us, you get the best insurance coverage with many advantages.",
     "subHeading": "Everything you need.",
     "parkingDamage": "Parking damage",
-    "parkingDamageDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "parkingDamageDescription": "With this additional option to comprehensive insurance, we will cover the costs if a stranger has damaged your parked car.",
     "assistance": "Assistance",
-    "assistanceDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "assistanceDescription": "How much would you like to pay in the event of a claim? Choose your own car insurance deductible.",
     "bonusProtection": "Bonus protection",
-    "bonusProtectionDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "bonusProtectionDescription": "If it stays at one claim per year, your bonus level will remain constant.",
     "purchasePriceProtection": "Purchase price protection",
-    "purchasePriceProtectionDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "purchasePriceProtectionDescription": "With this additional option for comprehensive insurance, you extend the current value supplement from 100% in the first two years to five years.",
     "ownDamage": "Own damage",
-    "ownDamageDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "ownDamageDescription": "We organize towing, repair, repatriation of your car and even cover rental car and taxi costs.",
     "innerSpace": "Inner space",
-    "innerSpaceDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews."
+    "innerSpaceDescription": "Do you have children or pets? With this additional option to comprehensive insurance, we pay for the cleaning costs."
   },
   "featured": {
     "trustExperts": "Simply trust experts",
@@ -63,6 +63,8 @@
     "lastName": "Last Name",
     "birthYear": "Date of birth",
     "zipCode": "Zip code",
+    "kmPerYear": "Km per year",
+
 
     "model": "Model",
     "1stepper": "Calculate your personal offer in 90 seconds.\n",

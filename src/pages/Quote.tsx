@@ -355,7 +355,7 @@ const Quote = () => {
 
                 <InputField
                 name="kmPerYear"
-                label="Km per year"
+                label={t("quote.kmPerYear")}
                 floating
                 type="text"
               />

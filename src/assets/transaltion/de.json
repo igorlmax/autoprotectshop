@@ -12,7 +12,7 @@
   },
   "hero": {
     "payPerKm": "Dein Start in eine bessere Autoversicherung",
-    "payFullPrice": "Wir versichern, was dir lieb ist",
+    "payFullPrice": "Wir versichern, was Dir lieb ist",
     "pointOne": "Die faire und flexible Autoversicherung",
     "pointTwo": "In 3 Minuten Tarif berechnen",
     "pointThree": "100% Online - Digital und schnell zu deinem Beitrag",
@@ -41,6 +41,8 @@
     "lastName": "Familienname",
     "birthYear": "Geburtsdatum",
     "zipCode": "Postleitzahl",
+    "kmPerYear": "Km pro Jahr",
+
 
     "benzin": "Benzin/Diesel",
     "strom": "Strom",
@@ -59,13 +61,13 @@
 
     "heading": "Bei uns erhalten Sie den besten Versicherungsschutz mit vielen Vorteilen.",
     "subHeading": "Alles, was Sie brauchen.",
-    "parkingDamageDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
-    "assistanceDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
-    "bonusProtectionDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
-    "purchasePriceProtectionDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    "parkingDamageDescription": "Mit dieser Zusatzoption zur Kaskoversicherung übernehmen wir die Kosten, falls ein Unbekannter Ihr parkiertes Auto beschädigt hat.",
+    "assistanceDescription": "Wie viel möchten Sie im Schadenfall übernehmen? Wählen Sie den Selbstbehalt Ihrer Autoversicherung selbst.",
+    "bonusProtectionDescription": "Wenn es bei einem Schaden pro Jahr bleibt, bleibt Ihre Bonusstufe konstant.",
+    "purchasePriceProtectionDescription": "Mit dieser Zusatzoption zur Kaskoversicherung erweitern Sie den Zeitwertzusatz von 100 % in den ersten beiden Jahren auf fünf Jahre.",
     "ownDamage": "Own damage",
-    "ownDamageDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
-    "innerSpaceDescription": "Leverage agile frameworks to provide a robust synopsis for high level overviews."
+    "ownDamageDescription": "Wir organisieren Abschleppen, Reparatur, Rückführung Ihres Autos und übernehmen sogar Kosten für Mietwagen und Taxi.",
+    "innerSpaceDescription": "Sie haben Kinder oder Haustiere? Mit dieser Zusatzoption zur Kaskoversicherung kommen wir für die Reinigungskosten auf."
   },
   "featured": {
     "trustExperts": "Einfach Experten vertrauen",
