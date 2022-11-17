@@ -21,12 +21,8 @@ import de from "../assets/transaltion/de.json";
 import en from "../assets/transaltion/en.json";
 import LanguageIcon from "@mui/icons-material/Language";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import ElectricCarIcon from "@mui/icons-material/ElectricCar";
-import SwapVerticalCircleIcon from "@mui/icons-material/SwapVerticalCircle";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 import lock from "../assets/images/lock4.png";
-import { useSearchParams } from "react-router-dom";
-
 
 setTranslations({ de, en });
 setDefaultLanguage("en");
@@ -47,10 +43,9 @@ const Navigation = () => {
     setAnchorEl(null);
   };
 
-
   return (
     <>
-      <AppBar position="sticky" color='inherit'>
+      <AppBar position="sticky" color="inherit">
         <Container maxWidth={"xl"}>
           <Toolbar>
             <Link to={"/"} style={{ textDecoration: "none" }}>
