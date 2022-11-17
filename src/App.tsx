@@ -6,7 +6,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import { CssBaseline } from "@mui/material";
 import Quote from "./pages/Quote";
-import Login from './pages/Login';
+import Login from "./pages/Login";
 
 function App() {
   return (
