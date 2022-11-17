@@ -38,7 +38,6 @@ const Newsletter = () => {
                 >
                   {t("newsletter.title")}
                 </Typography>
-
                 <Typography
                   color={"white"}
                   variant={"body2"}
@@ -46,13 +45,13 @@ const Newsletter = () => {
                 >
                   {t("newsletter.unsubscribe")}
                 </Typography>
-
                 <TextField
-                    className="inputRounded"
-                    placeholder={t("newsletter.email")}
-                    variant="outlined"
-                    size="small"
-                />              </Stack>
+                  className="inputRounded"
+                  placeholder={t("newsletter.email")}
+                  variant="outlined"
+                  size="small"
+                />{" "}
+              </Stack>
             </Grid>
             <Grid item lg={4}>
               <Box
@@ -64,7 +63,7 @@ const Newsletter = () => {
                   justifyContent: "center",
                 }}
               >
-                <img src={invitation} style={{maxWidth: '192px'}} />
+                <img src={invitation} style={{ maxWidth: "192px" }} />
               </Box>
             </Grid>
           </Stack>
