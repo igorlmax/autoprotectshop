@@ -3,10 +3,10 @@ import {
   Container,
   Divider,
   Grid,
-  Stack,
+  Stack, TextField,
   Typography,
   useTheme,
-} from "@mui/material";
+} from '@mui/material';
 import { useTranslation } from "react-multi-lang";
 import { SiInstagram } from "react-icons/si";
 import { BsFacebook, BsTwitter, BsWhatsapp } from "react-icons/bs";
@@ -108,6 +108,12 @@ const Footer = () => {
               You can unsubscribe at any time using the unsubscribe link in our
               emails or via our
             </Typography>
+            <TextField
+                className="inputRounded"
+                placeholder={t("newsletter.email")}
+                variant="outlined"
+                size="small"
+            />
           </Grid>
         </Stack>
         <Stack direction="row">

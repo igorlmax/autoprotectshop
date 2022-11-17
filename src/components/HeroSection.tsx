@@ -10,9 +10,8 @@ import {
 } from '@mui/material';
 import { useTranslation } from "react-multi-lang";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import carLoan from "../assets/images/seller.png";
+import carLoan from "../assets/images/original car alternative colour.png";
 import { Link } from "react-router-dom";
-import {ReactComponent as Logo} from '../assets/images/pocket.svg';
 
 const HeroSection = () => {
   const t = useTranslation();
@@ -73,7 +72,7 @@ const HeroSection = () => {
                   justifyContent: "center",
                 }}
             >
-                <img src={carLoan}/>
+                <img src={carLoan} style={{maxWidth: '420px'}}/>
             </Box>
           </Grid>
         </Stack>

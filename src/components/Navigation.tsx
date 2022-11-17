@@ -47,9 +47,10 @@ const Navigation = () => {
     setAnchorEl(null);
   };
 
+
   return (
     <>
-      <AppBar position="sticky" color="default">
+      <AppBar position="sticky" color='inherit'>
         <Container maxWidth={"xl"}>
           <Toolbar>
             <Link to={"/"} style={{ textDecoration: "none" }}>
