@@ -3,10 +3,11 @@ import {
   Container,
   Divider,
   Grid,
-  Stack, TextField,
+  Stack,
+  TextField,
   Typography,
   useTheme,
-} from '@mui/material';
+} from "@mui/material";
 import { useTranslation } from "react-multi-lang";
 import { SiInstagram } from "react-icons/si";
 import { BsFacebook, BsTwitter, BsWhatsapp } from "react-icons/bs";
@@ -33,7 +34,7 @@ const Footer = () => {
       container
       style={{ backgroundColor: theme.palette.primary.dark }}
       py={7}
-      id='footer'
+      id="footer"
     >
       <Container maxWidth={"lg"}>
         <Stack direction="row">
@@ -109,10 +110,10 @@ const Footer = () => {
               emails or via our
             </Typography>
             <TextField
-                className="inputRounded"
-                placeholder={t("newsletter.email")}
-                variant="outlined"
-                size="small"
+              className="inputRounded"
+              placeholder={t("newsletter.email")}
+              variant="outlined"
+              size="small"
             />
           </Grid>
         </Stack>
@@ -139,16 +140,16 @@ const Footer = () => {
             </a>
           </Stack>
           <Stack direction="row" spacing={2}>
-            <a href='#'>
+            <a href="#">
               <Typography color="white">@ 2022 {t("appName")}</Typography>
             </a>
-            <a href='#'>
+            <a href="#">
               <Typography color="white">Privacy</Typography>
             </a>
-            <a href='#'>
+            <a href="#">
               <Typography color="white">disclaimer</Typography>
             </a>
-            <a href='#'>
+            <a href="#">
               <Typography color="white">Terms of Use</Typography>
             </a>
           </Stack>
