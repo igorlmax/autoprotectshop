@@ -63,7 +63,7 @@ const Newsletter = () => {
                   justifyContent: "center",
                 }}
               >
-                <img src={invitation} style={{ maxWidth: "192px" }} />
+                <img loading='lazy' src={invitation} style={{ maxWidth: "192px" }} />
               </Box>
             </Grid>
           </Stack>

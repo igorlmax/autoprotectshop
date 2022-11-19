@@ -29,7 +29,7 @@ const Featured = () => {
                   justifyContent: 'center',
                 }}
             >
-              <img src={longTerm} />
+              <img loading='lazy' src={longTerm} />
             </Box>
 
           </Grid>

@@ -34,7 +34,7 @@ const PriceCard = ({
           flexDirection={"column"}
           py={3}
         >
-          <img src={icon} width={120} />
+          <img loading='lazy' src={icon} width={120} />
           <Typography variant={"h6"}>{heading}</Typography>
           <Typography variant={"caption"}>{subHeading}</Typography>
           <hr />

@@ -1,11 +1,15 @@
 import React from "react";
 import HeroSection from '../components/HeroSection';
-import Services from '../components/Services';
-import Featured from '../components/Featured';
-import Newsletter from '../components/Newsletter';
-import FqSection from '../components/FQSection';
-import Pricing from '../components/Pricing';
-import SpecTable from '../components/SpecTable';
+
+const FQSection = React.lazy(() => import("../components/FQSection"));
+const Newsletter = React.lazy(() => import("../components/Newsletter"));
+const Pricing = React.lazy(() => import("../components/Pricing"));
+const SpecTable = React.lazy(() => import("../components/SpecTable"));
+const Featured = React.lazy(() => import("../components/Featured"));
+const Services = React.lazy(() => import("../components/Services"));
+
+
+
 
 const Home = () => {
   return <>
@@ -15,7 +19,7 @@ const Home = () => {
     <SpecTable/>
     <Pricing/>
     <Newsletter/>
-    <FqSection/>
+    <FQSection/>
   </>;
 };
 
