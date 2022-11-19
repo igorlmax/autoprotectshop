@@ -7,16 +7,18 @@ import Footer from "./components/Footer";
 import { CssBaseline } from "@mui/material";
 import Quote from "./pages/Quote";
 import Login from "./pages/Login";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <Navigation />
       <CssBaseline />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/quote" element={<Quote />} />
-        <Route path="/login" element={<Login />} />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quote" element={<Quote />} />
+          <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </>

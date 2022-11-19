@@ -72,7 +72,7 @@ const HeroSection = () => {
                   justifyContent: "center",
                 }}
             >
-                <img loading='lazy' src={carLoan} style={{maxWidth: '420px'}}/>
+                <img src={carLoan} style={{maxWidth: '420px'}}/>
             </Box>
           </Grid>
         </Stack>
