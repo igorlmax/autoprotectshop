@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/autoprotectshop/static/css/main.fba79f03.css",
+    "main.js": "/autoprotectshop/static/js/main.d9d3b7de.js",
+    "static/js/327.83bea4ea.chunk.js": "/autoprotectshop/static/js/327.83bea4ea.chunk.js",
+    "static/js/306.2cd0591a.chunk.js": "/autoprotectshop/static/js/306.2cd0591a.chunk.js",
+    "static/js/821.2d8fff2b.chunk.js": "/autoprotectshop/static/js/821.2d8fff2b.chunk.js",
+    "static/js/578.faf34478.chunk.js": "/autoprotectshop/static/js/578.faf34478.chunk.js",
+    "static/js/955.a76d085e.chunk.js": "/autoprotectshop/static/js/955.a76d085e.chunk.js",
+    "static/js/866.0ee027f8.chunk.js": "/autoprotectshop/static/js/866.0ee027f8.chunk.js",
+    "static/js/787.08a1240c.chunk.js": "/autoprotectshop/static/js/787.08a1240c.chunk.js",
+    "static/js/614.76c0f935.chunk.js": "/autoprotectshop/static/js/614.76c0f935.chunk.js",
+    "static/media/original car alternative colour.png": "/autoprotectshop/static/media/original car alternative colour.eec355ce6c9a467f92bc.png",
+    "static/media/long-term.png": "/autoprotectshop/static/media/long-term.d7220170ea1b8fa3c597.png",
+    "static/media/shield01.png": "/autoprotectshop/static/media/shield01.7fc544003c321e09e3c2.png",
+    "static/media/shield03.png": "/autoprotectshop/static/media/shield03.7d0fc53498c724e7d2a6.png",
+    "static/media/shield02.png": "/autoprotectshop/static/media/shield02.b57699597cab4dec47e5.png",
+    "static/media/email-marketing02.png": "/autoprotectshop/static/media/email-marketing02.e2fc6cc49fee74c33d0f.png",
+    "index.html": "/autoprotectshop/index.html",
+    "main.fba79f03.css.map": "/autoprotectshop/static/css/main.fba79f03.css.map",
+    "main.d9d3b7de.js.map": "/autoprotectshop/static/js/main.d9d3b7de.js.map",
+    "327.83bea4ea.chunk.js.map": "/autoprotectshop/static/js/327.83bea4ea.chunk.js.map",
+    "306.2cd0591a.chunk.js.map": "/autoprotectshop/static/js/306.2cd0591a.chunk.js.map",
+    "821.2d8fff2b.chunk.js.map": "/autoprotectshop/static/js/821.2d8fff2b.chunk.js.map",
+    "578.faf34478.chunk.js.map": "/autoprotectshop/static/js/578.faf34478.chunk.js.map",
+    "955.a76d085e.chunk.js.map": "/autoprotectshop/static/js/955.a76d085e.chunk.js.map",
+    "866.0ee027f8.chunk.js.map": "/autoprotectshop/static/js/866.0ee027f8.chunk.js.map",
+    "787.08a1240c.chunk.js.map": "/autoprotectshop/static/js/787.08a1240c.chunk.js.map",
+    "614.76c0f935.chunk.js.map": "/autoprotectshop/static/js/614.76c0f935.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fba79f03.css",
+    "static/js/main.d9d3b7de.js"
+  ]
+}
