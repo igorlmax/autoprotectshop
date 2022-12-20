@@ -17,9 +17,9 @@ const Featured = () => {
 
   return (
     <Grid container style={{ backgroundColor: "#f7f7f9" }} py={3}>
-      <Container maxWidth={"xl"}>
-        <Stack direction={"row"}>
-          <Grid item lg={4}>
+      <Container maxWidth="xl">
+        <Stack direction={{ xs: "column", md: "row" }}>
+          <Grid item xs={12} lg={4}>
             <Box
                 sx={{
                   width: '100%',
@@ -33,13 +33,13 @@ const Featured = () => {
             </Box>
 
           </Grid>
-          <Grid item lg={6}>
+          <Grid item xs={12} lg={6}>
             <Stack
-              style={{ height: 400 }}
+              py={3}
               direction="column"
               spacing={0}
               justifyContent="center"
-              alignItems="flex-start"
+              alignItems={{ xs: "center", md: "flex-start" }}
             >
               <Typography
                   variant='h2'
@@ -48,13 +48,9 @@ const Featured = () => {
               >
                 {t("featured.trustExperts")}
               </Typography>
-              <Typography sx={{
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                display: "-webkit-box",
-                WebkitLineClamp: "2",
-                WebkitBoxOrient: "vertical",
-              }} variant={"h2"}>
+              <Typography variant={"h2"} fontSize={'xx-large'} sx={{
+                textAlign: {xs: 'center', md: 'left'}
+              }}>
                 {t("featured.pricePerformance")}
               </Typography>
 

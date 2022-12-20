@@ -14,13 +14,13 @@ function App() {
     <>
       <Navigation />
       <CssBaseline />
-      <ScrollToTop />
+      {/*<ScrollToTop />*/}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quote" element={<Quote />} />
         <Route path="/login" element={<Login />} />
       </Routes>
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 }

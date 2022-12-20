@@ -14,14 +14,14 @@ const Services = () => {
 
   return (
     <>
-      <Container maxWidth={"xl"}>
-        <Grid container py={5}>
-            <Grid item lg>
-            <Typography fontSize='32px' align='center' variant='h2'>{t("services.heading")}</Typography>
-            <Typography align='center' variant='h2' fontSize='24px' py={2}>{t("services.subHeading")}</Typography>
+      <Container maxWidth="xl">
+        <Grid container py={3}>
+            <Grid item xs={12}>
+            <Typography fontSize='xx-large' align='center' variant='h2'>{t("services.heading")}</Typography>
+            <Typography align='center' variant='h2' fontSize='x-large' py={2}>{t("services.subHeading")}</Typography>
 
               <Stack
-              direction={"row"}
+              direction={{ xs: "column", md: "row" }}
               justifyContent={"center"}
               alignItems={"center"}
               spacing={6}
@@ -32,8 +32,8 @@ const Services = () => {
                   icon={
                     <CarCrashRoundedIcon
                       style={{ fontSize: "54px" }}
-                      fontSize={"large"}
-                      color={"primary"}
+                      fontSize="large"
+                      color="primary"
                     />
                   }
                   title={t("services.parkingDamage")}

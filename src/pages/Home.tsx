@@ -16,10 +16,10 @@ const Home = () => {
     <HeroSection/>
     <Services/>
     <Featured/>
-    <SpecTable/>
-    <Pricing/>
-    <Newsletter/>
-    <FQSection/>
+    {/*<SpecTable/>*/}
+    {/*<Pricing/>*/}
+    {/*<Newsletter/>*/}
+    {/*<FQSection/>*/}
   </>;
 };
 

@@ -19,11 +19,10 @@ const HeroSection = () => {
 
   return (
     <Grid container style={{ backgroundColor: theme.palette.secondary.main }}>
-      <Container maxWidth={"xl"}>
-        <Stack direction={"row"}>
-          <Grid item lg={6}>
+      <Container maxWidth="xl">
+        <Stack direction={{ xs: "column", md: "row" }}>
+          <Grid mt={4} item xs={12} lg={6}>
             <Stack
-              style={{ height: 400 }}
               direction="column"
               spacing={2}
               justifyContent="center"
@@ -54,7 +53,11 @@ const HeroSection = () => {
               <Link to={"/quote"} style={{ textDecoration: "none" }}>
                 <Button
                   variant={"contained"}
-                  style={{ borderRadius: 50, padding: '12px 30px', marginTop: 14 }}
+                  style={{
+                    borderRadius: 50,
+                    padding: "12px 30px",
+                    marginTop: 14,
+                  }}
                   size={"large"}
                 >
                   {t("hero.getQuote")}
@@ -62,17 +65,17 @@ const HeroSection = () => {
               </Link>
             </Stack>
           </Grid>
-          <Grid item lg={6} justifyContent='center'>
+          <Grid item xs={12} lg={6} justifyContent="center">
             <Box
-                sx={{
-                  width: "100%",
-                  height: "100%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
+              sx={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
             >
-                <img src={carLoan} style={{maxWidth: '420px'}}/>
+              <img src={carLoan} style={{ maxWidth: "360px" }} />
             </Box>
           </Grid>
         </Stack>
