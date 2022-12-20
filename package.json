@@ -1,7 +1,7 @@
 {
   "name": "insurence-quote",
   "version": "0.1.0",
-  "homepage": "https://igorlmax.github.io/autoprotectshop",
+  "homepage": "http://autoprotectshop.com",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -32,7 +32,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
