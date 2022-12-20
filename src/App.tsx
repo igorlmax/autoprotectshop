@@ -14,11 +14,11 @@ function App() {
     <>
       <Navigation />
       <CssBaseline />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/quote" element={<Quote />} />
-          <Route path="/login" element={<Login />} />
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/quote" element={<Quote />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </>
