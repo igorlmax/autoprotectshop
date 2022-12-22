@@ -33,7 +33,7 @@ const Pricing = () => {
           </Typography>
           <Stack
             style={{ margin: "32px 0" }}
-            direction={"row"}
+            direction={{ xs: "column", md: "row" }}
             justifyContent={"center"}
             alignItems={"center"}
             justifyItems={"center"}

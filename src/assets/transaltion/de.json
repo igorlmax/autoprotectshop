@@ -112,9 +112,10 @@
   "facilities": {
     "heading": "Auf einen Blick",
     "subHeading": "Diese Leistungen sind dabei:",
-    "column1": " ",
+    "column1": "Beschreibung",
     "column2": "Vollkasko",
     "column3": "Teilkasko",
+    "column4": "Info",
     "facilityTest1": "Sach- und Vermögensschäden",
     "facilityTest2": "Personenschäden",
     "facilityTest3": "Eigenschadendeckung",

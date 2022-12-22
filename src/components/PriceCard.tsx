@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  Divider,
-  Paper,
-  Stack,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Box, Button, Divider, Paper, Stack, Typography } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-multi-lang";
@@ -20,7 +12,6 @@ const PriceCard = ({
   features,
 }: any) => {
   const t = useTranslation();
-  const theme = useTheme();
 
   return (
     <>
@@ -34,7 +25,7 @@ const PriceCard = ({
           flexDirection={"column"}
           py={3}
         >
-          <img loading='lazy' src={icon} width={120} />
+          <img loading="lazy" src={icon} width={120} />
           <Typography variant={"h6"}>{heading}</Typography>
           <Typography variant={"caption"}>{subHeading}</Typography>
           <hr />

@@ -73,7 +73,7 @@ const SpecTable = () => {
   return (
     <Grid
       container
-      p={7}
+      py={7}
       id='services'
     >
       <Container maxWidth={"md"}>
@@ -84,7 +84,7 @@ const SpecTable = () => {
             <TableHead>
               <TableRow>
                 <StyledTableCell>{t("facilities.column1")}</StyledTableCell>
-                <StyledTableCell align="center" />
+                <StyledTableCell align="center">{t("facilities.column4")}</StyledTableCell>
                 <StyledTableCell align="center">
                   {t("facilities.column2")}
                 </StyledTableCell>
