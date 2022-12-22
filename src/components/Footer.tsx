@@ -37,7 +37,7 @@ const Footer = () => {
       id="footer"
     >
       <Container maxWidth={"lg"}>
-        <Stack direction="row">
+        <Stack direction={{ xs: "column", md: "row" }}>
           <Grid item lg={3}>
             <Typography fontSize="18px" color="white" fontWeight="100">
               Customer Service
@@ -124,7 +124,7 @@ const Footer = () => {
         </Stack>
         <hr />
         <Divider flexItem />
-        <Stack direction="row" justifyContent="space-between" mt={4}>
+        <Stack direction={{ xs: "column", md: "row" }} justifyContent="space-between" mt={4}>
           <Stack direction="row" spacing={2}>
             <a href="https://www.facebook.com">
               <BsFacebook color="white" fontSize="24px" />

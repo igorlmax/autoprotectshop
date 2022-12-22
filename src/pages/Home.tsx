@@ -19,9 +19,8 @@ const Home = () => {
     <Featured/>
     <SpecTable/>
     <Pricing/>
-    {/*<PricingTabs/>*/}
-    {/*<Newsletter/>*/}
-    {/*<FQSection/>*/}
+    <Newsletter/>
+    <FQSection/>
   </>;
 };
 

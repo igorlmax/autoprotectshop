@@ -2,12 +2,12 @@ import React from "react";
 import {
   Box,
   Container,
-  Grid,
+  Grid, Hidden,
   Stack,
   TextField,
   Typography,
   useTheme,
-} from "@mui/material";
+} from '@mui/material';
 import invitation from "../assets/images/email-marketing02.png";
 import { useTranslation } from "react-multi-lang";
 
@@ -18,17 +18,16 @@ const Newsletter = () => {
   return (
     <>
       <Grid container style={{ backgroundColor: theme.palette.primary.main }}>
-        <Container maxWidth={"lg"}>
-          <Stack direction={"row"}>
-            <Grid item lg={8}>
+        <Container maxWidth={"lg"} >
+          <Stack direction={{ xs: "column", md: "row" }}  my={4}>
+            <Grid item xs={12} lg={8}>
               <Stack
-                style={{ height: 400 }}
                 direction="column"
-                spacing={2}
+                spacing={4}
                 justifyContent="center"
-                alignItems="flex-start"
+                alignItems={{ xs: "center", md: "flex-start" }}
               >
-                <Typography color={"secondary"} fontWeight={100} fontSize={24}>
+                <Typography color={"secondary"} fontWeight={100} fontSize={'x-large'}>
                   {t("newsletter.heading")}
                 </Typography>
                 <Typography
@@ -38,6 +37,7 @@ const Newsletter = () => {
                 >
                   {t("newsletter.title")}
                 </Typography>
+                <Hidden mdDown>
                 <Typography
                   color={"white"}
                   variant={"body2"}
@@ -45,15 +45,16 @@ const Newsletter = () => {
                 >
                   {t("newsletter.unsubscribe")}
                 </Typography>
+                </Hidden>
                 <TextField
                   className="inputRounded"
                   placeholder={t("newsletter.email")}
                   variant="outlined"
                   size="small"
-                />{" "}
+                />
               </Stack>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item xs={12} lg={4} my={3}>
               <Box
                 sx={{
                   width: "100%",
@@ -66,6 +67,16 @@ const Newsletter = () => {
                 <img loading='lazy' src={invitation} style={{ maxWidth: "192px" }} />
               </Box>
             </Grid>
+            <Hidden mdUp>
+            <Typography
+                color={"white"}
+                variant={"body2"}
+                style={{ fontWeight: "100" }}
+                fontSize={'x-small'}
+            >
+              {t("newsletter.unsubscribe")}
+            </Typography>
+            </Hidden>
           </Stack>
         </Container>
       </Grid>
