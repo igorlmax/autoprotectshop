@@ -2,17 +2,17 @@ import React from "react";
 import "./App.css";
 import { Route, Routes } from "react-router";
 import Home from "./pages/Home";
-import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import { CssBaseline } from "@mui/material";
 import Quote from "./pages/Quote";
 import Login from "./pages/Login";
 import ScrollToTop from "./components/ScrollToTop";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      {/*<Navigation />*/}
+      <Navbar />
       <CssBaseline />
       <ScrollToTop />
       <Routes>

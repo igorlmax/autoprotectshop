@@ -45,7 +45,7 @@ const Navigation = () => {
 
   return (
     <>
-      <AppBar position="sticky" color="inherit">
+      <AppBar component="nav" position="sticky" color="inherit">
         <Container maxWidth={"xl"}>
           <Toolbar>
             <Link to={"/"} style={{ textDecoration: "none" }}>
