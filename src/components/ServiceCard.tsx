@@ -10,7 +10,7 @@ const ServiceCard = ({ icon, title, description }: any) => {
 
   return (
     <Stack
-      direction={{ xs: "row", md: "column" }}
+      direction="column"
       spacing={2}
       flexWrap="wrap"
       alignItems={{ xs: "center", md: "flexStart" }}

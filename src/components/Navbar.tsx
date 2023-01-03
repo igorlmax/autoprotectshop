@@ -13,12 +13,20 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { setLanguage, useTranslation } from "react-multi-lang";
+import {
+  setDefaultLanguage,
+  setLanguage,
+  setTranslations,
+  useTranslation,
+} from "react-multi-lang";
 import { Link, useLocation } from "react-router-dom";
 import lock from "../assets/images/lock4.png";
-import { Container, Menu, MenuItem, Stack, useTheme } from "@mui/material";
+import { Container, Menu, MenuItem } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import LanguageIcon from "@mui/icons-material/Language";
+import de from "../assets/transaltion/de.json";
+import en from "../assets/transaltion/en.json";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 
 interface Props {
   /**
@@ -29,7 +37,9 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+
+setTranslations({ de, en });
+setDefaultLanguage("en");
 
 export default function Navbar(props: Props) {
   const { window } = props;
@@ -37,6 +47,7 @@ export default function Navbar(props: Props) {
   const t = useTranslation();
 
   const { pathname } = useLocation();
+  console.log("pathname: ", pathname);
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -116,20 +127,31 @@ export default function Navbar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
+    <>
+      <Box sx={{ flexGrow: 1 }}>
+
       <AppBar component="nav" position="sticky" color="inherit">
         <Container maxWidth={"xl"}>
-          <Toolbar>
+          <Toolbar sx={{display: 'flex', justifyContent: 'space-between'}}>
             <IconButton
               color="inherit"
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
+              sx={{ display: { sm: "none" } }}
             >
               <MenuIcon />
             </IconButton>
+            <MenuItem sx={{ display: { sm: "none" } }}>
+              <p>
+                Auto &#10070;<b> Protect</b>
+              </p>
+            </MenuItem>
+
+            <MenuItem sx={{ display: { sm: "none"} }}>
+              <PersonOutlineOutlinedIcon />
+            </MenuItem>
+
             <Typography
               variant="h6"
               component="div"
@@ -144,7 +166,7 @@ export default function Navbar(props: Props) {
                 </IconButton>
               </Link>
             </Typography>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Box sx={{ display: { xs: "none", sm: "flex" }, gap: 2 }}>
               <Button
                 variant="outlined"
                 color="primary"
@@ -248,6 +270,7 @@ export default function Navbar(props: Props) {
           </Toolbar>
         </Container>
       </AppBar>
+      </Box>
       <Box component="nav">
         <Drawer
           container={container}
@@ -268,9 +291,6 @@ export default function Navbar(props: Props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-      </Box>
-    </Box>
+    </>
   );
 }

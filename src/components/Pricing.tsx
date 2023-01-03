@@ -9,7 +9,6 @@ import PricingTabs from "./PricingTabs";
 
 const Pricing = () => {
   const t = useTranslation();
-  const theme = useTheme();
 
   return (
     <>

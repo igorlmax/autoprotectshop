@@ -7,7 +7,7 @@ import {
   Stack,
   Typography,
   useTheme,
-} from '@mui/material';
+} from "@mui/material";
 import { useTranslation } from "react-multi-lang";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import carLoan from "../assets/images/original car alternative colour.png";
@@ -19,15 +19,10 @@ const HeroSection = () => {
 
   return (
     <Grid container style={{ backgroundColor: theme.palette.secondary.main }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Stack direction={{ xs: "column", md: "row" }}>
           <Grid mt={4} item xs={12} lg={6}>
-            <Stack
-              direction="column"
-              spacing={2}
-              justifyContent="center"
-              alignItems="flex-start"
-            >
+            <Stack direction="column" spacing={2} alignItems="flex-start">
               <Typography color={"primary"} variant={"h2"}>
                 {t("hero.payPerKm")}
               </Typography>
@@ -40,13 +35,15 @@ const HeroSection = () => {
               </Typography>
 
               <Grid gap={2} container direction="row" alignItems="center">
-                <CheckCircleIcon sx={{ color: "white" }} /> {t("hero.pointOne")}
+                <img src={"icons8-checkmark-48.png"} width={24} />
+                {t("hero.pointOne")}
               </Grid>
               <Grid gap={2} container direction="row" alignItems="center">
-                <CheckCircleIcon sx={{ color: "white" }} /> {t("hero.pointTwo")}
+                <img src={"icons8-checkmark-48.png"} width={24} />                {t("hero.pointTwo")}
+
               </Grid>
               <Grid gap={2} container direction="row" alignItems="center">
-                <CheckCircleIcon sx={{ color: "white" }} />{" "}
+                <img src={"icons8-checkmark-48.png"} width={24} />{" "}
                 {t("hero.pointThree")}
               </Grid>
 

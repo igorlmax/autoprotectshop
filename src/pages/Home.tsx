@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSection from '../components/HeroSection';
-import PricingTabs from '../components/PricingTabs';
 
 const FQSection = React.lazy(() => import("../components/FQSection"));
 const Newsletter = React.lazy(() => import("../components/Newsletter"));
