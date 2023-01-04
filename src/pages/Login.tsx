@@ -80,7 +80,7 @@ const Login = () => {
       <Grid
         container
         style={{ backgroundColor: theme.palette.primary.light }}
-        py={28}
+        py={{ xs: 8, md: 28 }}
       >
         <Container maxWidth={"md"}>
           <FormikStepper

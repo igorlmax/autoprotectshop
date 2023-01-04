@@ -82,29 +82,29 @@ export default function Navbar(props: Props) {
           </Link>
         </Button>
 
-        <Link to="#services">
-          <ListItem disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={t("navigation.services")} />
-            </ListItemButton>
-          </ListItem>
-        </Link>
+        {/*<Link to="#services">*/}
+        {/*  <ListItem disablePadding>*/}
+        {/*    <ListItemButton sx={{ textAlign: "center" }}>*/}
+        {/*      <ListItemText primary={t("navigation.services")} />*/}
+        {/*    </ListItemButton>*/}
+        {/*  </ListItem>*/}
+        {/*</Link>*/}
 
-        <Link to="#pricing">
-          <ListItem disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={t("navigation.Pricing")} />
-            </ListItemButton>
-          </ListItem>
-        </Link>
-        <Link to="#contact">
+        {/*<Link to="#pricing">*/}
+        {/*  <ListItem disablePadding>*/}
+        {/*    <ListItemButton sx={{ textAlign: "center" }}>*/}
+        {/*      <ListItemText primary={t("navigation.Pricing")} />*/}
+        {/*    </ListItemButton>*/}
+        {/*  </ListItem>*/}
+        {/*</Link>*/}
+        <Link to="login">
           <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={t("navigation.contact")} />
             </ListItemButton>
           </ListItem>
         </Link>
-        <Link to="#reportDamage">
+        <Link to="login">
           <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={t("navigation.reportDamage")} />
@@ -142,16 +142,21 @@ export default function Navbar(props: Props) {
             >
               <MenuIcon />
             </IconButton>
+            <Link to={"/"} style={{ textDecoration: "none" }}>
+
             <MenuItem sx={{ display: { sm: "none" } }}>
               <p>
                 Auto &#10070;<b> Protect</b>
               </p>
             </MenuItem>
+            </Link>
+
+            <Link to={"login"} style={{ textDecoration: "none" }}>
 
             <MenuItem sx={{ display: { sm: "none"} }}>
               <PersonOutlineOutlinedIcon />
             </MenuItem>
-
+            </Link>
             <Typography
               variant="h6"
               component="div"
