@@ -22,7 +22,7 @@ const HeroSection = () => {
       <Container maxWidth="lg">
         <Stack direction={{ xs: "column", md: "row" }}>
           <Grid mt={4} item xs={12} lg={6}>
-            <Stack direction="column" spacing={2} alignItems="flex-start">
+            <Stack direction="column" spacing={2} alignItems={{xs: "center", md: "flex-start", }}>
               <Typography color={"primary"} variant={"h2"}>
                 {t("hero.payPerKm")}
               </Typography>

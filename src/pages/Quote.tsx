@@ -107,10 +107,9 @@ const Quote = () => {
 
   return (
     <>
-      <Grid container style={{ backgroundColor: theme.palette.primary.light }}>
+      <Grid container style={{ backgroundColor: theme.palette.primary.light }} py={4}>
         <Container
           maxWidth={"md"}
-          style={{ height: "820px", marginBottom: 12 }}
         >
           <FormikStepper
             onSubmit={onSubmit}
@@ -160,7 +159,7 @@ const Quote = () => {
                 else return <FaCheck />;
               }}
             >
-                <Typography align='center' variant='h2'>{t("quote.1stepper")}</Typography>
+                <Typography align='center' variant='h2' mb={6}>{t("quote.1stepper")}</Typography>
 
                 <SelectField
                 name="brand"
@@ -204,7 +203,7 @@ const Quote = () => {
                 gap={2}
                 alignItems={"center"}
                 justifyItems={"center"}
-                my={8}
+                my={6}
               >
                 <Button onClick={() => setActiveIndex(0)}>
                   <Box
@@ -292,7 +291,7 @@ const Quote = () => {
                       gap={2}
                       alignItems={"center"}
                       justifyItems={"center"}
-                      my={8}
+                      my={6}
                   >
                       <Button onClick={() => setActiveIndex(0)}>
                           <Box
