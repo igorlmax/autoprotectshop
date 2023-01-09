@@ -15,7 +15,7 @@ const PriceCard = ({
 
   return (
     <>
-      <Paper elevation={4} style={{ width: "350px", padding: "30px" }}>
+      <Paper elevation={4} style={{ width: "300px", padding: "30px" }}>
         <Box
           component="div"
           display={"flex"}

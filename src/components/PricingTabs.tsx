@@ -5,6 +5,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { useTranslation } from 'react-multi-lang';
+import { Container, Grid } from '@mui/material';
 
 export default function PricingTabs({children1, children2, children3}: any) {
     const [value, setValue] = React.useState('1');
@@ -15,7 +16,7 @@ export default function PricingTabs({children1, children2, children3}: any) {
     };
 
     return (
-        <Box >
+        <Container>
             <TabContext value={value}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                     <TabList variant={'fullWidth'} onChange={handleChange} aria-label="lab API tabs example">
@@ -28,6 +29,6 @@ export default function PricingTabs({children1, children2, children3}: any) {
                 <TabPanel value="2">{children2}</TabPanel>
                 <TabPanel value="3">{children3}</TabPanel>
             </TabContext>
-        </Box>
+        </Container>
     );
 }
