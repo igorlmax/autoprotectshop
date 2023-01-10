@@ -22,7 +22,7 @@ import {
 } from "react-multi-lang";
 import { Link, useLocation } from "react-router-dom";
 import lock from "../assets/images/lock4.png";
-import { Container, Menu, MenuItem } from "@mui/material";
+import { Container, Hidden, Menu, MenuItem } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import LanguageIcon from "@mui/icons-material/Language";
 import de from "../assets/transaltion/de.json";
@@ -201,27 +201,27 @@ export default function Navbar(props: Props) {
             </MenuItem>
           </Link>
 
-          {getLanguage() === "de" ? (
+          <Hidden mdUp>
+            {getLanguage() === "de" ? (
               <Button
-                  onClick={() => {
-                    setLanguage("en");
-                    handleClose();
-                  }}
+                onClick={() => {
+                  setLanguage("en");
+                  handleClose();
+                }}
               >
                 <img width={20} src={english} />
               </Button>
-
-          ) : (
+            ) : (
               <Button
-                  onClick={() => {
-                    setLanguage("de");
-                    handleClose();
-                  }}
+                onClick={() => {
+                  setLanguage("de");
+                  handleClose();
+                }}
               >
                 <img width={20} src={german} />
               </Button>
-
-          )}
+            )}
+          </Hidden>
 
           {/*<Link to={"login"} style={{ textDecoration: "none" }}>*/}
           {/*  <MenuItem sx={{ display: { sm: "none" } }}>*/}
