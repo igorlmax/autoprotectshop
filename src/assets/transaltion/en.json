@@ -1,5 +1,7 @@
 {
   "appName": "Auto Protect",
+  "germanLang": "German",
+  "englishLang": "English",
   "navigation": {
     "getQuote": "Get Quote",
     "Pricing": "Pricing",

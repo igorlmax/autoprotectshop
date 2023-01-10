@@ -18,6 +18,7 @@ import {
   setLanguage,
   setTranslations,
   useTranslation,
+  getLanguage,
 } from "react-multi-lang";
 import { Link, useLocation } from "react-router-dom";
 import lock from "../assets/images/lock4.png";
@@ -27,6 +28,9 @@ import LanguageIcon from "@mui/icons-material/Language";
 import de from "../assets/transaltion/de.json";
 import en from "../assets/transaltion/en.json";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import { useEffect } from "react";
+import german from "../assets/images/germany.png";
+import english from "../assets/images/united-kingdom.png";
 
 interface Props {
   /**
@@ -41,13 +45,34 @@ const drawerWidth = 240;
 setTranslations({ de, en });
 setDefaultLanguage("en");
 
+const useQuery = () => {
+  const { search } = useLocation();
+  return React.useMemo(() => new URLSearchParams(search), [search]);
+};
+
 export default function Navbar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const t = useTranslation();
 
+  let query = useQuery();
+
+  const setUrlLang = () => {
+    console.log("query: ", query.get("lang"));
+    setLanguage(query.get("lang") as string);
+  };
+
+  useEffect(() => {
+    if (query.get("lang") === "de") {
+      setLanguage("de");
+      handleClose();
+    } else {
+      setLanguage("en");
+      handleClose();
+    }
+  }, []);
+
   const { pathname } = useLocation();
-  console.log("pathname: ", pathname);
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -112,6 +137,34 @@ export default function Navbar(props: Props) {
           </ListItem>
         </Link>
 
+        <ListItem disablePadding>
+          <ListItemButton
+            onClick={() => {
+              setLanguage("de");
+              handleClose();
+            }}
+            sx={{ textAlign: "center" }}
+          >
+            <img width={20} src={german} />
+
+            <ListItemText primary={t("germanLang")} />
+          </ListItemButton>
+        </ListItem>
+
+        <ListItem disablePadding>
+          <ListItemButton
+            onClick={() => {
+              setLanguage("en");
+              handleClose();
+            }}
+            sx={{ textAlign: "center" }}
+          >
+            <img width={20} src={english} />
+
+            <ListItemText primary={t("englishLang")} />
+          </ListItemButton>
+        </ListItem>
+
         <Button
           variant={"contained"}
           startIcon={<LocalPhoneIcon />}
@@ -128,148 +181,170 @@ export default function Navbar(props: Props) {
 
   return (
     <>
-        <AppBar component="nav" position="sticky" color="inherit">
-          <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ display: { sm: "none" } }}
-              size={"large"}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Link to={"/"} style={{ textDecoration: "none" }}>
-              <MenuItem sx={{ display: { sm: "none" } }}>
-                <Typography fontSize={22}>
-                  Auto&#8758;<b>Protect</b>
-                </Typography>
-              </MenuItem>
-            </Link>
+      <AppBar component="nav" position="sticky" color="inherit">
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ display: { sm: "none" } }}
+            size={"large"}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
+            <MenuItem sx={{ display: { sm: "none" } }}>
+              <Typography fontSize={22}>
+                Auto&#8758;<b>Protect</b>
+              </Typography>
+            </MenuItem>
+          </Link>
 
-            <Link to={"login"} style={{ textDecoration: "none" }}>
-              <MenuItem sx={{ display: { sm: "none" } }}>
-                <PersonOutlineOutlinedIcon />
-              </MenuItem>
-            </Link>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-            >
-              <Link to={"/"} style={{ textDecoration: "none" }}>
-                <IconButton size={"large"} edge="start" aria-label="menu">
-                  <img src={lock} style={{ maxWidth: 48 }} />
-                  <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                    {t("appName")}
-                  </Typography>
-                </IconButton>
-              </Link>
-            </Typography>
-            <Box sx={{ display: { xs: "none", sm: "flex" }, gap: 2 }}>
+          {getLanguage() === "de" ? (
               <Button
-                variant="outlined"
-                color="primary"
-                style={{ borderRadius: 50 }}
-              >
-                <Link to={"/quote"} style={{ textDecoration: "none" }}>
-                  {t("navigation.getQuote")}
-                </Link>
-              </Button>
-
-              <Link to="#services">
-                <Button
-                  color="inherit"
-                  onClick={() =>
-                    // @ts-ignore
-                    document.getElementById("services").scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
-                >
-                  {t("navigation.services")}
-                </Button>
-              </Link>
-
-              <Link to="#pricing">
-                <Button
-                  color="inherit"
-                  onClick={() =>
-                    // @ts-ignore
-                    document.getElementById("pricing").scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
-                >
-                  {t("navigation.Pricing")}
-                </Button>
-              </Link>
-
-              <Link to="#footer">
-                <Button
-                  color="inherit"
-                  onClick={() =>
-                    // @ts-ignore
-                    document.getElementById("footer").scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
-                >
-                  {t("navigation.contact")}
-                </Button>
-              </Link>
-
-              <Link to={"/login"} style={{ textDecoration: "none" }}>
-                <Button color="inherit">{t("navigation.reportDamage")}</Button>
-              </Link>
-              <Button
-                variant={"contained"}
-                startIcon={<LocalPhoneIcon />}
-                style={{ borderRadius: 50 }}
-              >
-                <a href="tel:8665562570"> {t("navigation.Hotline")}</a>
-              </Button>
-
-              <Button
-                id="basic-button"
-                aria-controls={open ? "basic-menu" : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? "true" : undefined}
-                onClick={handleClick}
-              >
-                <LanguageIcon />
-              </Button>
-              <Menu
-                id="basic-menu"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-                MenuListProps={{
-                  "aria-labelledby": "basic-button",
-                }}
-              >
-                <MenuItem
-                  sx={{ width: 120 }}
-                  onClick={() => {
-                    setLanguage("de");
-                    handleClose();
-                  }}
-                >
-                  DE
-                </MenuItem>
-                <MenuItem
                   onClick={() => {
                     setLanguage("en");
                     handleClose();
                   }}
-                >
-                  EN
-                </MenuItem>
-              </Menu>
-            </Box>
-          </Toolbar>
-        </AppBar>
+              >
+                <img width={20} src={english} />
+              </Button>
+
+          ) : (
+              <Button
+                  onClick={() => {
+                    setLanguage("de");
+                    handleClose();
+                  }}
+              >
+                <img width={20} src={german} />
+              </Button>
+
+          )}
+
+          {/*<Link to={"login"} style={{ textDecoration: "none" }}>*/}
+          {/*  <MenuItem sx={{ display: { sm: "none" } }}>*/}
+          {/*    <PersonOutlineOutlinedIcon />*/}
+          {/*  </MenuItem>*/}
+          {/*</Link>*/}
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+          >
+            <Link to={"/"} style={{ textDecoration: "none" }}>
+              <IconButton size={"large"} edge="start" aria-label="menu">
+                <img src={lock} style={{ maxWidth: 48 }} />
+                <Typography variant="h6" sx={{ flexGrow: 1 }}>
+                  {t("appName")}
+                </Typography>
+              </IconButton>
+            </Link>
+          </Typography>
+          <Box sx={{ display: { xs: "none", sm: "flex" }, gap: 2 }}>
+            <Button
+              variant="outlined"
+              color="primary"
+              style={{ borderRadius: 50 }}
+            >
+              <Link to={"/quote"} style={{ textDecoration: "none" }}>
+                {t("navigation.getQuote")}
+              </Link>
+            </Button>
+
+            <Link to="#services">
+              <Button
+                color="inherit"
+                onClick={() =>
+                  // @ts-ignore
+                  document.getElementById("services").scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
+              >
+                {t("navigation.services")}
+              </Button>
+            </Link>
+
+            <Link to="#pricing">
+              <Button
+                color="inherit"
+                onClick={() =>
+                  // @ts-ignore
+                  document.getElementById("pricing").scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
+              >
+                {t("navigation.Pricing")}
+              </Button>
+            </Link>
+
+            <Link to="#footer">
+              <Button
+                color="inherit"
+                onClick={() =>
+                  // @ts-ignore
+                  document.getElementById("footer").scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
+              >
+                {t("navigation.contact")}
+              </Button>
+            </Link>
+
+            <Link to={"/login"} style={{ textDecoration: "none" }}>
+              <Button color="inherit">{t("navigation.reportDamage")}</Button>
+            </Link>
+            <Button
+              variant={"contained"}
+              startIcon={<LocalPhoneIcon />}
+              style={{ borderRadius: 50 }}
+            >
+              <a href="tel:8665562570"> {t("navigation.Hotline")}</a>
+            </Button>
+
+            <Button
+              id="basic-button"
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={handleClick}
+            >
+              <LanguageIcon />
+            </Button>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "basic-button",
+              }}
+            >
+              <MenuItem
+                sx={{ width: 120 }}
+                onClick={() => {
+                  setLanguage("de");
+                  handleClose();
+                }}
+              >
+                DE
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  setLanguage("en");
+                  handleClose();
+                }}
+              >
+                EN
+              </MenuItem>
+            </Menu>
+          </Box>
+        </Toolbar>
+      </AppBar>
       <Box component="nav">
         <Drawer
           container={container}
