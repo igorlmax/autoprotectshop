@@ -42,8 +42,9 @@ const Footer = () => {
             <Typography fontSize="18px" color="white" fontWeight="100">
               Customer Service
             </Typography>
-            {customerService.map((item) => (
+            {customerService.map((item, index) => (
               <Typography
+                  key={index}
                 color="white"
                 fontSize="14px"
                 fontWeight="100"
@@ -58,8 +59,9 @@ const Footer = () => {
             <Typography fontSize="18px" color="white" fontWeight="100">
               Go To
             </Typography>
-            {goTo.map((item) => (
+            {goTo.map((item, index) => (
               <Typography
+                  key={index}
                 color="white"
                 fontSize="14px"
                 fontWeight="100"
@@ -74,8 +76,9 @@ const Footer = () => {
             <Typography fontSize="18px" color="white" fontWeight="100">
               Languages
             </Typography>
-            {languages.map((item) => (
+            {languages.map((item, index) => (
               <Typography
+                  key={index}
                 color="white"
                 fontSize="14px"
                 fontWeight="100"

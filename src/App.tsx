@@ -8,6 +8,7 @@ import Quote from "./pages/Quote";
 import Login from "./pages/Login";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
+import Dashboard from './pages/dashboard';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/quote" element={<Quote />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/insurance" element={<Dashboard />} />
       </Routes>
       <Footer />
     </>
