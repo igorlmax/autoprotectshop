@@ -9,6 +9,11 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
+// console.log("Global Store: ", store.getState());
+// store.dispatch({type: 'todos/getTodos', payload: 'Test'})
+// store.dispatch({type: 'todos/addTodos', payload: 'Test'})
+
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
