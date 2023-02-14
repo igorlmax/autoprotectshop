@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import CreateTask from "../components/tasks/CreateTask";
 
 // const selectTasks = state => state.agents.map(agent => agent.id)
 const selectTodos = (state: any) => state.tasks;
@@ -13,9 +14,12 @@ const Dashboard = () => {
     dispatch({ type: "todos/getTodos" });
   }, []);
   return (
-    <div>
-      <pre>{JSON.stringify(todos, null, 2)}</pre>
-    </div>
+    <>
+      <CreateTask />
+      <div>
+        <pre>{JSON.stringify(todos, null, 2)}</pre>
+      </div>
+    </>
   );
 };
 

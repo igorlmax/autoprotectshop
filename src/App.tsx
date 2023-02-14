@@ -8,7 +8,7 @@ import Quote from "./pages/Quote";
 import Login from "./pages/Login";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
-import Dashboard from './pages/dashboard';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/quote" element={<Quote />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/insurance" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer />
     </>

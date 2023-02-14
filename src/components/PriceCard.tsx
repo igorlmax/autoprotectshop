@@ -36,8 +36,8 @@ const PriceCard = ({
           </Typography>
 
           <Stack direction={"column"} spacing={2} mt={2}>
-            {features.map((feature: string) => (
-              <Stack direction={"row"} spacing={1}>
+            {features.map((feature: string, index: number) => (
+              <Stack key={index} direction={"row"} spacing={1}>
                 <Stack>
                   <CheckCircleIcon
                     style={{ color: "#10a258", fontSize: "20px" }}
