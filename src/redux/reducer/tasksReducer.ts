@@ -1,7 +1,7 @@
 interface ITask {
-  id: number;
-  text: string;
-  completed: boolean;
+  id?: number;
+  text?: string;
+  completed?: boolean;
   color?: string;
 }
 
@@ -11,25 +11,31 @@ const initialState: ITask[] = [
   { id: 2, text: "Build something fun!", completed: false, color: "blue" },
 ];
 
+function nextTaskId(task: any) {
+  const maxId = task.reduce(
+    (maxId: any, task: any) => Math.max(task.id, maxId),
+    -1
+  );
+  return maxId + 1;
+}
+
 export default function tasksReducer(
   state: ITask[] = initialState,
-  action: { type: any; payload: any }
+  action: any
 ) {
   switch (action.type) {
-    case 'todos/addTodo': {
+    case "tasks/getTasks": {
+      return state
+    }
+    case "tasks/addTask": {
       return [
         ...state,
         {
-          id: 10,
+          id: nextTaskId(state),
           text: action.payload,
           completed: false,
         },
-      ]
-    }
-    case "todos/getTodos": {
-      return {
-        ...state,
-      };
+      ];
     }
     default:
       return state;

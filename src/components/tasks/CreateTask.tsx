@@ -8,7 +8,7 @@ const CreateTask = () => {
   const handleKeyDown = (e: any) => {
     const trimmedText = e.target.value.trim();
     if (e.key === "Enter" && trimmedText) {
-      dispatch({ type: "todos/addTodo", payload: trimmedText });
+      dispatch({ type: "tasks/addTask", payload: trimmedText });
       setText("");
     }
   };

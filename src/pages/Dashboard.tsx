@@ -11,7 +11,7 @@ const Dashboard = () => {
   const todos = useSelector(selectTodos);
 
   useEffect(() => {
-    dispatch({ type: "todos/getTodos" });
+    dispatch({ type: "tasks/getTasks" });
   }, []);
   return (
     <>
