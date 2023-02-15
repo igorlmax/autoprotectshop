@@ -39,7 +39,7 @@ export default function tasksReducer(
     }
     case "tasks/allCompleted": {
       return state.map((task: ITask) => {
-        return { ...task, completed: true } // set property to true
+        return { ...task, completed: true }; // set property to true
       });
     }
     case "task/toggled": {
@@ -47,12 +47,12 @@ export default function tasksReducer(
         if (task.id !== action.payload) {
           return task; // display all todos
         }
-        
+
         return {
           ...task,
           completed: !task.completed, // toggle the completed property
         };
-      })
+      });
     }
 
     case "tasks/onClearCompletedClicked": {
