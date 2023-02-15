@@ -7,7 +7,6 @@ const TaskList = () => {
   const tasks: ITask[] = useSelector((state: any) => state.tasks);
 
   const renderListItems = tasks.map((task: ITask) => {
-    // @ts-ignore
     return <TaskListItem key={task.id} task={task} />;
   });
 

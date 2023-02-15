@@ -25,7 +25,7 @@ export default function tasksReducer(
 ) {
   switch (action.type) {
     case "tasks/getTasks": {
-      return state
+      return state;
     }
     case "tasks/addTask": {
       return [
@@ -36,6 +36,9 @@ export default function tasksReducer(
           completed: false,
         },
       ];
+    }
+    case "tasks/filterByStatus": {
+      return { ...state, status: action.payload };
     }
     default:
       return state;

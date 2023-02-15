@@ -1,1 +1,1 @@
-https://codesandbox.io/s/github/reduxjs/redux-fundamentals-example-app/tree/checkpoint-5-uiAllActions/?from-embed=&file=/src/features/todos/TodoList.js
+https://codesandbox.io/s/github/reduxjs/redux-fundamentals-example-app/tree/checkpoint-8-normalizedState/?from-embed=&file=/src/features/filters/filtersSlice.js
