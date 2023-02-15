@@ -2,15 +2,15 @@ import React from "react";
 import TaskListItem from "./TaskListItem";
 import { ITask } from "../../redux/reducer/tasksReducer";
 import { useAppSelector } from "../../redux/hook";
+import { RootState } from "../../redux/store";
 
 const TaskList = () => {
-  const tasks: ITask[] = useAppSelector((state: any) => state.tasks);
+  const tasks = useAppSelector((state: RootState) => state.tasksReducer);
 
-  const renderListItems = tasks.map((task: ITask) => {
+  const renderListItems = tasks?.map((task: ITask) => {
     return <TaskListItem key={task.id} task={task} />;
   });
 
-  console.log("output: ", tasks);
   return (
     <>
       <h2>Task List</h2>

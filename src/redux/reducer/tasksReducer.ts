@@ -37,8 +37,26 @@ export default function tasksReducer(
         },
       ];
     }
-    case "tasks/filterByStatus": {
-      return { ...state, status: action.payload };
+    case "tasks/allCompleted": {
+      return state.map((task: ITask) => {
+        return { ...task, completed: true } // set property to true
+      });
+    }
+    case "task/toggled": {
+      return state.map((task: ITask) => {
+        if (task.id !== action.payload) {
+          return task; // display all todos
+        }
+        
+        return {
+          ...task,
+          completed: !task.completed, // toggle the completed property
+        };
+      })
+    }
+
+    case "tasks/onClearCompletedClicked": {
+      return state.filter((todo: ITask) => !todo.completed);
     }
     default:
       return state;

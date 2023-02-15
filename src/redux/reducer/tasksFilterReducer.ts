@@ -1,4 +1,4 @@
-export const StatusFilters = {
+export const StatusOptions = {
   All: 'all',
   Active: 'active',
   Completed: 'completed',
@@ -6,7 +6,7 @@ export const StatusFilters = {
 
 /* state */
 const initialState = {
-  status: StatusFilters.All,
+  status: StatusOptions.All,
 };
 
 
@@ -21,6 +21,7 @@ export default function tasksFilterReducer(
         status: action.payload
       };
     }
+
     default:
       return state;
   }
