@@ -12,3 +12,8 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(...thunkMiddleware, logger))
 );
 export default store;
+
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
+
+

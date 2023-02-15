@@ -1,9 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { StatusFilters } from "../../redux/reducer/tasksFilterReducer";
+import { useAppSelector } from '../../redux/hook';
+import { RootState } from '../../redux/store';
 
 /**
- * Renders the buttons for all Status filter Options all, active, completed
+ * Renders dynamically the buttons for filter Status "all", "active", "completed"
  * @param status
  * @param onChange
  * @constructor
@@ -35,7 +37,7 @@ const FilterStatus = ({ value: status, onChange }) => {
 
 const FilterSection = () => {
   const dispatch = useDispatch();
-  const { status } = useSelector((state: any) => state.taskFilter);
+  const { status } = useAppSelector((state: RootState) => state.taskFilterReducer);
 
   const onStatusChange = (status: string) =>
     dispatch({ type: "tasks/filterByStatus", payload: status });
