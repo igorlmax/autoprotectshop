@@ -1,8 +1,9 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { StatusOptions } from '../../redux/reducer/tasksFilterReducer';
-import { useAppSelector } from '../../redux/hook';
-import { RootState } from '../../redux/store';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { StatusOptions } from "../../redux/reducer/tasksFilterReducer";
+import { useAppSelector } from "../../redux/hook";
+import { RootState } from "../../redux/store";
+import { ITask } from "../../redux/reducer/tasksReducer";
 
 /**
  * Renders dynamically the buttons for filter Status "all", "active", "completed"
@@ -30,9 +31,15 @@ const FilterStatus = ({ value: status, onChange }) => {
     );
   });
 
+  const tasks = useAppSelector((state: RootState) => state.tasksReducer);
+
+  const numberOfTasksLeft = tasks.filter((task: ITask) => !task.completed)
+    .length;
+
   return (
     <div>
       <h5>Filter by Status</h5>
+      <h4>Tasks left: {numberOfTasksLeft}</h4>
       <ul>{renderFilters}</ul>
     </div>
   );
@@ -40,7 +47,8 @@ const FilterStatus = ({ value: status, onChange }) => {
 const FilterSection = () => {
   const dispatch = useDispatch();
   const onMarkCompletedClicked = () => dispatch({ type: "tasks/allCompleted" });
-  const onClearCompletedClicked = () => dispatch({ type: "tasks/onClearCompletedClicked" });
+  const onClearCompletedClicked = () =>
+    dispatch({ type: "tasks/onClearCompletedClicked" });
 
   const { status } = useAppSelector(
     (state: RootState) => state.taskFilterReducer
