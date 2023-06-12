@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.58e8f8f3.css",
-    "main.js": "/static/js/main.3c32c90f.js",
+    "main.css": "/static/css/main.7c8179ce.css",
+    "main.js": "/static/js/main.c511b8eb.js",
     "static/js/327.83bea4ea.chunk.js": "/static/js/327.83bea4ea.chunk.js",
     "static/js/306.f8fbebea.chunk.js": "/static/js/306.f8fbebea.chunk.js",
     "static/js/755.d5c6351d.chunk.js": "/static/js/755.d5c6351d.chunk.js",
@@ -12,14 +12,15 @@
     "static/js/614.76c0f935.chunk.js": "/static/js/614.76c0f935.chunk.js",
     "static/js/307.baeb7054.chunk.js": "/static/js/307.baeb7054.chunk.js",
     "static/media/original car alternative colour.png": "/static/media/original car alternative colour.eec355ce6c9a467f92bc.png",
+    "static/media/home.svg": "/static/media/home.ac2ab065cc2f651fe62f22613fd5c4ee.svg",
     "static/media/long-term.png": "/static/media/long-term.d7220170ea1b8fa3c597.png",
     "static/media/shield01.png": "/static/media/shield01.7fc544003c321e09e3c2.png",
     "static/media/shield03.png": "/static/media/shield03.7d0fc53498c724e7d2a6.png",
     "static/media/shield02.png": "/static/media/shield02.b57699597cab4dec47e5.png",
     "static/media/email-marketing02.png": "/static/media/email-marketing02.e2fc6cc49fee74c33d0f.png",
     "index.html": "/index.html",
-    "main.58e8f8f3.css.map": "/static/css/main.58e8f8f3.css.map",
-    "main.3c32c90f.js.map": "/static/js/main.3c32c90f.js.map",
+    "main.7c8179ce.css.map": "/static/css/main.7c8179ce.css.map",
+    "main.c511b8eb.js.map": "/static/js/main.c511b8eb.js.map",
     "327.83bea4ea.chunk.js.map": "/static/js/327.83bea4ea.chunk.js.map",
     "306.f8fbebea.chunk.js.map": "/static/js/306.f8fbebea.chunk.js.map",
     "755.d5c6351d.chunk.js.map": "/static/js/755.d5c6351d.chunk.js.map",
@@ -31,7 +32,7 @@
     "307.baeb7054.chunk.js.map": "/static/js/307.baeb7054.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.58e8f8f3.css",
-    "static/js/main.3c32c90f.js"
+    "static/css/main.7c8179ce.css",
+    "static/js/main.c511b8eb.js"
   ]
 }
